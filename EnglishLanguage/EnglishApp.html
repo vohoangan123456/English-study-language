@@ -1,0 +1,600 @@
+<html>
+<head>
+<style>
+.addOn
+{
+	height: 250px;
+	border: solid 1px blue;			
+}
+.text
+{
+	height:250px;
+	border: solid 1px blue;
+}
+.showResult
+{
+	height: auto;
+	border: solid 1px blue;
+}
+.footer
+{
+}
+.textarea 
+{
+    display:inline-block;
+    border: solid 1px #000;
+    min-height: 200px;
+    width: 300px;
+}
+.labelClassCSS1
+{
+	width:200px;
+	border: solid 1px #000;
+	font-weight:bold;
+}
+.labelClassCSS2
+{
+	width:200px;
+	border: solid 1px #000;
+	font-weight:bold;
+}
+.labelClassCSS3
+{
+	width:200px;
+	border: solid 1px #000;
+	font-weight:bold;
+}
+.viewMode2CSS1
+{
+	width:160px;
+	border: solid 1px #000;
+	font-weight:bold;
+}
+.viewMode2CSS2
+{
+	width:30px;
+	border: solid 1px #000;
+	font-weight:bold;
+}
+.viewMode2CSS3
+{
+	width:410px;
+	border: solid 1px #000;
+	font-weight:bold;
+	padding-left: 10px;
+}
+</style>
+<link rel="stylesheet" href="js/jquery-ui.css"/>
+<script language="javascript" type="text/javascript" src="js/jquery-1.7.2.min.js"></script>	
+<script src="js/jquery-ui.js"></script>
+<script language="javascript" type="text/javascript" src="js/eng.js"></script>	
+<script language="javascript" type="text/javascript" src="js/newwordData.js"></script>
+<script language="javascript" type="text/javascript" src="js/ToeicWord.js"></script>	
+<script language="javascript" type="text/javascript" src="js/noval.js"></script>
+<script language="javascript" type="text/javascript" src="js/kanji.js"></script>
+<script language="javascript" type="text/javascript" src="js/japanese_new1.js"></script>
+<script language="javascript" type="text/javascript" src="js/Noun.js"></script>
+<script language="javascript" type="text/javascript" src="js/ImageWords.js"></script>
+<script type="text/javascript">
+	//store the global word
+	var dataWordObject = [];
+	//store the temporal word
+	var tempWordObject = [];
+	var tempDataWord = [];
+	var tempMeaning = [];
+	var wordOnSteps = 20;
+	var tempDataForAllMode;
+	var autoCompleteMeaning = [];
+	var isNeedConvert = true;	//need to convert example and meaning
+	$(document).ready(function(){	
+		$("[value = 'write_vietnamese']").hide();
+		$("[value = 'write_kanji_hira']").hide();
+		$("[value = 'write_kanji_vietnamese']").hide();
+		$("[value = 'write_hira']").hide();
+		
+		$("[value = 'vietnamese']").show();
+		$("[value = 'english']").show();
+	//[begin] get event keyup for textbox
+		$(window).on('keyup', function(e){
+			if(e.which == 37)	//ctrl
+			{
+				nextRandom();
+			}
+		});
+		$("#txtWord").on('keyup', function(e)
+		{
+			check();
+		});
+		$("#txtType").on('keyup', function(e)
+		{
+			check();
+		});
+		$("#txtMeaning").on('keyup', function(e)
+		{
+			check();
+		});
+		$("#inputTest").on('keyup', function(e)
+		{
+			//value that entered
+			var valueEntered = this.value;
+			if(e.which == 13)
+			{
+				valueEntered = valueEntered.substr(0,valueEntered.length-1);
+			}
+			var isRightWord = checkExist(valueEntered, dataWordObject, 1);
+			if(e.which == 13)//enter
+			{
+				isRightWord = checkExist(valueEntered, dataWordObject, 2);
+				if(isRightWord.length == 0)
+				{
+					alert("'" + valueEntered + "' is not exist in database");
+					$("#inputTest").val(valueEntered);
+					return;
+				}else{
+					var tempBoolean = false;
+					var tempIsRightWord = -1;
+					$.each(isRightWord, function(index, value){
+						if(dataWordObject[value].meaning.trim(" ") == $("#randomWord").html().trim(" "))
+						{
+							tempBoolean = true;
+							tempIsRightWord = value;
+						}
+					});
+					if(tempBoolean == false)
+					{
+						alert("'" + valueEntered + "' is not appropriate with this meaning");
+						$("#inputTest").val(valueEntered);
+						return;
+					}else{
+						isRightWord = tempIsRightWord;
+					}
+				}
+				
+				$("#meaningOfText").html(	dataWordObject[isRightWord].word.trim(" ")+ " /" +
+											dataWordObject[isRightWord].pronun+"/ ("+
+											dataWordObject[isRightWord].type.trim(" ")+") "+
+											dataWordObject[isRightWord].meaning.trim(" "));
+				var exampleSentence = "<label title='"+ dataWordObject[isRightWord].title +"'>Ex:" + dataWordObject[isRightWord].example +"</label>";
+				$("#exampleOfWord").html(exampleSentence);
+				$("#exampleOfWord").css("color","red")
+				tempWordObject.splice(randomIndex,1);						
+				$(".labelCSS"+isRightWord).css("color", "#FB0921");
+				$("#showArea").val($("#showArea").val()+"\r\n"+ $("#inputTest").val());
+				$("#inputTest").val("");
+				
+				if(tempWordObject.length == 0)
+				{
+					alert("Finish work. Stop typing");
+					reloadPage();
+				}
+				
+				randomIndex = random(tempWordObject.length);
+				$("#randomWord").html(tempWordObject[randomIndex].meaning);
+			}
+		});
+	//[finish event keyup]
+		$("#modeTest").on('change', function()
+		{
+			$( "#inputTest" ).autocomplete({
+			  source: autoCompleteMeaning
+			});
+			if($("#modeTest").val() == "english")
+			{
+				dataWordObject = convertData(dataWordObject, 1);
+			}
+			else if($("#modeTest").val() == "vietnamese")
+			{
+				dataWordObject = convertData(dataWordObject, 2);
+			}
+			else if($("#modeTest").val() == "write_hira")
+			{
+				dataWordObject = convertData(dataWordObject, 3);
+			}
+			else if($("#modeTest").val() == "write_vietnamese")
+			{
+				dataWordObject = convertData(dataWordObject, 4);
+			}
+			else if($("#modeTest").val() == "write_kanji_hira")
+			{
+				dataWordObject = convertData(dataWordObject, 5);
+			}
+			else if($("#modeTest").val() == "write_kanji_vietnamese")
+			{
+				dataWordObject = convertData(dataWordObject, 6);
+			}
+			/*else
+			{
+				$( "#inputTest" ).autocomplete("destroy");
+			}*/
+			reloadPage();
+		});
+		
+		$("#modeViewWords").on('change', function()
+		{
+			reloadPage();
+		});
+
+	//iterate all the data stored in newwordData.js	
+		$("#version").on('change',function(){
+			dataWordObject = [];
+			autoCompleteMeaning = [];
+			switch($("#version").val())
+			{
+				case "groupword":
+					$("[value = 'write_vietnamese']").hide();
+					$("[value = 'write_kanji_hira']").hide();
+					$("[value = 'write_kanji_vietnamese']").hide();
+					$("[value = 'write_hira']").hide();
+					
+					$("[value = 'vietnamese']").show();
+					$("[value = 'english']").show();
+					$.each( NounWords, function( index, value )
+					{
+						dataWordObject.push(value);
+						autoCompleteMeaning.push(value.meaning);
+					});
+					break;
+				case "noval":
+					$("[value = 'write_vietnamese']").hide();
+					$("[value = 'write_kanji_hira']").hide();
+					$("[value = 'write_kanji_vietnamese']").hide();
+					$("[value = 'write_hira']").hide();
+					
+					$("[value = 'vietnamese']").show();
+					$("[value = 'english']").show();
+					$.each( NovalWord, function( index, value )
+					{
+						dataWordObject.push(value);
+						autoCompleteMeaning.push(value.meaning);
+					});
+					break;
+				case "word":
+					$("[value = 'write_vietnamese']").hide();
+					$("[value = 'write_kanji_hira']").hide();
+					$("[value = 'write_kanji_vietnamese']").hide();
+					$("[value = 'write_hira']").hide();
+					
+					$("[value = 'vietnamese']").show();
+					$("[value = 'english']").show();
+					$.each( newWords, function( index, value )
+					{
+						dataWordObject.push(value);
+						autoCompleteMeaning.push(value.meaning);
+					});
+					break;
+				case "toeic":
+					$("[value = 'write_hira']").html()
+					$("[value = 'write_vietnamese']").hide();
+					$("[value = 'write_kanji_hira']").hide();
+					$("[value = 'write_kanji_vietnamese']").hide();
+					$("[value = 'write_hira']").hide();
+					
+					$("[value = 'vietnamese']").show();
+					$("[value = 'english']").show();
+					$.each( ToeicWords, function( index, value )
+					{
+						/*var data = {
+							word: value.word,
+							type: value.type,
+							meaning: value.meaning
+						};*/
+						dataWordObject.push(value);
+						autoCompleteMeaning.push(value.meaning);
+					});	
+					break;
+				case "kanji-vietnamese":
+					$("[value = 'vietnamese']").hide();
+					$("[value = 'english']").hide();
+					$("[value = 'write_hira']").hide();
+					$("[value = 'write_kanji_hira']").hide();
+					
+					$("[value = 'write_kanji_vietnamese']").show();
+					$("[value = 'write_vietnamese']").show();
+					
+					$.each( kanjiwords, function( index, value )
+					{
+						dataWordObject.push(value);
+						autoCompleteMeaning.push(value.meaning);
+					});
+					break;
+				case "japanese_1":
+					$("[value = 'vietnamese']").show();
+					$("[value = 'english']").show();
+					$("[value = 'write_hira']").hide();
+					$("[value = 'write_kanji_hira']").hide();
+					
+					$("[value = 'write_kanji_vietnamese']").hide();
+					$("[value = 'write_vietnamese']").hide();
+					
+					$.each( japaneseWord1, function( index, value )
+					{
+						dataWordObject.push(value);
+						autoCompleteMeaning.push(value.meaning);
+					});
+					break;
+				case "imageWord":
+					$("[value = 'write_vietnamese']").hide();
+					$("[value = 'write_kanji_hira']").hide();
+					$("[value = 'write_kanji_vietnamese']").hide();
+					$("[value = 'write_hira']").hide();
+					
+					$("[value = 'vietnamese']").show();
+					$("[value = 'english']").show();
+					$.each( ImageWords, function( index, value )
+					{
+						dataWordObject.push(value);
+						autoCompleteMeaning.push(value.meaning);
+					});
+					break;
+				default:
+					break;
+			}
+			/*if($("#version").val() == "groupword"){
+				$("[value = 'write_vietnamese']").hide();
+				$("[value = 'write_kanji_hira']").hide();
+				$("[value = 'write_kanji_vietnamese']").hide();
+				$("[value = 'write_hira']").hide();
+				
+				$("[value = 'vietnamese']").show();
+				$("[value = 'english']").show();
+				$.each( NounWords, function( index, value )
+				{
+					dataWordObject.push(value);
+					autoCompleteMeaning.push(value.meaning);
+				});
+			}
+			else if($("#version").val() == "noval"){
+				$("[value = 'write_vietnamese']").hide();
+				$("[value = 'write_kanji_hira']").hide();
+				$("[value = 'write_kanji_vietnamese']").hide();
+				$("[value = 'write_hira']").hide();
+				
+				$("[value = 'vietnamese']").show();
+				$("[value = 'english']").show();
+				$.each( NovalWord, function( index, value )
+				{
+					dataWordObject.push(value);
+					autoCompleteMeaning.push(value.meaning);
+				});
+			}
+			else if($("#version").val() == "word")
+			{
+				$("[value = 'write_vietnamese']").hide();
+				$("[value = 'write_kanji_hira']").hide();
+				$("[value = 'write_kanji_vietnamese']").hide();
+				$("[value = 'write_hira']").hide();
+				
+				$("[value = 'vietnamese']").show();
+				$("[value = 'english']").show();
+				$.each( newWords, function( index, value )
+				{
+					dataWordObject.push(value);
+					autoCompleteMeaning.push(value.meaning);
+				});
+			}
+			else if($("#version").val() == "toeic")
+			{
+				$("[value = 'write_hira']").html()
+				$("[value = 'write_vietnamese']").hide();
+				$("[value = 'write_kanji_hira']").hide();
+				$("[value = 'write_kanji_vietnamese']").hide();
+				$("[value = 'write_hira']").hide();
+				
+				$("[value = 'vietnamese']").show();
+				$("[value = 'english']").show();
+				$.each( ToeicWords, function( index, value )
+				{
+					dataWordObject.push(value);
+					autoCompleteMeaning.push(value.meaning);
+				});	
+			}else if($("#version").val() == "kanji-hiragana"){
+				$("[value = 'vietnamese']").hide();
+				$("[value = 'english']").hide();
+				$("[value = 'write_kanji_vietnamese']").hide();
+				$("[value = 'write_vietnamese']").hide();
+				
+				$("[value = 'write_kanji_hira']").show();
+				$("[value = 'write_hira']").show();
+				$.each( kanjiwords, function( index, value )
+				{
+					dataWordObject.push(value);
+					autoCompleteMeaning.push(value.meaning);
+				});
+			}
+			else if($("#version").val() == "kanji-vietnamese"){
+				$("[value = 'vietnamese']").hide();
+				$("[value = 'english']").hide();
+				$("[value = 'write_hira']").hide();
+				$("[value = 'write_kanji_hira']").hide();
+				
+				$("[value = 'write_kanji_vietnamese']").show();
+				$("[value = 'write_vietnamese']").show();
+				
+				$.each( kanjiwords, function( index, value )
+				{
+					dataWordObject.push(value);
+					autoCompleteMeaning.push(value.meaning);
+				});
+			}*/
+			$("#selectRange").remove();
+			selectRange = addSelectRanges(dataWordObject, wordOnSteps, $("#rangeOfTest"));
+			selectRange.on('change', function()
+			{
+				reloadPage();
+			});
+			reloadPage();
+		});
+		
+		if($("#version").val() == "word")
+		{
+			$.each( newWords, function( index, value )
+			{
+				dataWordObject.push(value);
+				autoCompleteMeaning.push(value.meaning);
+			});
+		}
+		
+		var selectRange = addSelectRanges(dataWordObject, wordOnSteps, $("#rangeOfTest"));
+		selectRange.on('change', function()
+		{
+			reloadPage();
+		});
+		//use to suggest what they entered https://jqueryui.com/autocomplete/
+		/*$( "#inputTest" ).autocomplete({
+		  source: dataWord
+		});*/
+		
+		//reloadPage();
+	//init the array temporal (mode normal)
+		tempWordObject = dataWordObject.slice(0, dataWordObject.length);
+	//init the list of words (mode show 3 column)
+		changeModeViewWord(tempWordObject,"1");
+	//get random word and show on the screen
+		randomIndex = random(tempWordObject.length);
+		$("#randomWord").html(tempWordObject[randomIndex].meaning);
+	});
+	
+	//save data [continue to write into file js]
+	function saveNewWord()
+	{
+		//store value to file data
+		var value = {
+			word: $("#txtWord").val(),
+			type: $("#txtType").val(),
+			meaning: $("#txtMeaning").val()
+		};
+		newWords.push(value);
+		
+		//disable the button and clear all the textbox
+		$("#txtWord").val("");
+		$("#txtType").val("");
+		$("#txtMeaning").val("");
+		$("#addSource").prop("disabled", true);
+			
+		var result = "";
+		$.each( newWords, function( index, value ){
+			result = result + "<br/>" + value.word;
+		});
+		$("#showArea").html(result);
+	}
+	
+	//check all the information are entered
+	function check()
+	{
+		var word = $("#txtWord").val();
+		var type = $("#txtType").val();
+		var meaning = $("#txtMeaning").val();
+		if(word.trim(' ') != '' && type.trim(' ') != '' && meaning.trim(' ') != '')
+		{
+			$("#addSource").prop("disabled", false);	//if all of the textbox are enterd. enable the submit button
+		}
+	}
+	function reloadPage()
+	{
+		$("#meaningOfText").html("");
+		changeModeViewWord(tempWordObject, $("#modeViewWords").val());
+		changeRangeTest($("#selectRange").val(),wordOnSteps);
+	}
+	function nextRandom(){
+		randomIndex = random(tempWordObject.length);
+		$("#randomWord").html(tempWordObject[randomIndex].meaning);
+		tempWordObject.splice(randomIndex,1);
+	}
+</script>
+</head>
+<body>
+<form>
+	<div align="center" style="padding-bottom:20px">
+		<label style="font-weight:bold; font-size:40px; color: blue">Study new work every day</label></br>
+		<select id="version">		
+			<option value="word">New Word </option>
+			<option value="noval">Noval </option>
+			<option value="groupword">group words</option>
+			<option value="imageWord">Image words</option>
+			<option value="toeic">Toeic </option>			
+			<option value="kanji-hiragana">Kanji - hiragana </option>
+			<option value="kanji-vietnamese">Kanji - vietnamese </option>
+			<option value="japanese_1">japanese_1</option>
+		</select>
+	</div>
+	<table style="position: absolute; right:0; left:0; width:100%">
+		<tr>
+			<td style="width:50%">
+				<div class="text">
+					<div align="center">
+					<label style="font-weight: bold; font-size: 40px; color:red"> Typing your word </label> <br/>
+					<label id="randomWord" style="font-size:40px"></label> <br/>
+					<textarea id="inputTest" rows="2" style="margin-top:20px"></textarea> <br/>
+					<label id="meaningOfText"></label><br/>
+					<label id="exampleOfWord"></label><br/>
+					<label style="font-weight:bold; font-size:20px">Choose mode: </label>
+					<select id="modeTest" style="margin-top: 20px">					  
+					  <option value="vietnamese">Vietnamese - English</option>					  
+					  <option value="english">English - Vietnamese</option>
+					  <option value="write_hira">Kanji - hiragana</option>
+					  <option value="write_vietnamese">Kanji - vietnamese</option>
+					  <option value="write_kanji_hira">hiragana - kanji</option>
+					  <option value="write_kanji_vietnamese">vietnamese - kanji</option>
+					</select>
+					<span id="rangeOfTest">
+						position: 
+					</span>		
+					</div>
+				</div>
+			</td>
+			<td style="width:50%">
+				<div class="addOn">
+				<table align="center">
+					<tr align="center">
+						<td colspan="3">
+							<label style="font-weight: bold; font-size: 40px; color:red">Store new words</label>
+						</td>
+					</tr>
+					<tr style="text-align:center">
+						<td>Word</td>
+						<td>Type</td>
+						<td>Meaning</td>
+					</tr>
+					<tr>
+						<td><input type="text" id="txtWord" style="width:150px"/></td>
+						<td><input type="text" id="txtType" style="width:30px"/></td>
+						<td><input type="text" id="txtMeaning" style="width:300px"/></td>
+					</tr>
+					<tr align="center">
+						<td colspan="3">
+							<input type="button" id="addSource" value="SAVE" onclick="saveNewWord()" disabled style="margin-top: 20px" />
+						</td>
+					</tr>
+				</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="footer" align="center">
+					<input type="button" id="next" value="NEXT" onclick="nextRandom()"/>
+					<!--<label>Hoang An's App for learning new words</label>-->
+				</div>
+			</td>
+			<td>
+				<div class="showResult">
+					<div align="center">
+						<label style="font-weight: bold; font-size: 40px; color:red"> All your words stored </label> <br/>
+						<label style="font-weight:bold; font-size:20px">Choose mode: </label>
+						<select id="modeViewWords" style="margin-top: 20px; margin-bottom:20px">
+						  <option value="1">3 column</option>
+						  <option value="2">detail</option>
+						</select>
+						<label id="showArea" contentEditable="true"></label>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div class="conteiner">
+	
+	</div>	
+	
+</form>
+</body>
+</html>

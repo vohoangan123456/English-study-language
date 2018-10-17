@@ -75,6 +75,7 @@
 <script language="javascript" type="text/javascript" src="js/japanese_new1.js"></script>
 <script language="javascript" type="text/javascript" src="js/Noun.js"></script>
 <script language="javascript" type="text/javascript" src="js/ImageWords.js"></script>
+<script language="javascript" type="text/javascript" src="js/minanoNihongo.js"></script>
 <script type="text/javascript">
 	//store the global word
 	var dataWordObject = [];
@@ -312,6 +313,21 @@
 						autoCompleteMeaning.push(value.meaning);
 					});
 					break;
+				case "minanoNihongo":
+					$("[value = 'vietnamese']").show();
+					$("[value = 'english']").show();
+					$("[value = 'write_hira']").hide();
+					$("[value = 'write_kanji_hira']").hide();
+					
+					$("[value = 'write_kanji_vietnamese']").hide();
+					$("[value = 'write_vietnamese']").hide();
+					
+					$.each( minanoNihongoWords, function( index, value )
+					{
+						dataWordObject.push(value);
+						autoCompleteMeaning.push(value.meaning);
+					});
+					break;
 				case "imageWord":
 					$("[value = 'write_vietnamese']").hide();
 					$("[value = 'write_kanji_hira']").hide();
@@ -515,6 +531,7 @@
 			<option value="kanji-hiragana">Kanji - hiragana </option>
 			<option value="kanji-vietnamese">Kanji - vietnamese </option>
 			<option value="japanese_1">japanese_1</option>
+			<option value="minanoNihongo">Minano Nihongo</option>
 		</select>
 	</div>
 	<table style="position: absolute; right:0; left:0; width:100%">

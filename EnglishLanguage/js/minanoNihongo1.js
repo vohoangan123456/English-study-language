@@ -211,8 +211,8 @@
     word: 'ぜんぶで',
     type: '',
     meaning: 'tổng cộng',
-    example: '',
-    title: '',
+    example: 'ぜんぶで　５００えんです。',
+    title: 'tổng cộng 500 yên.',
     pronun: 'tổng cộng'
 },
 {
@@ -693,7 +693,7 @@
     meaning: 'sông',
     example: '',
     title: '',
-    pronun: 'sông'
+    pronun: 'xuyên'
 },
 {
     word: 'びじゅつ',
@@ -757,7 +757,7 @@
     meaning: 'bảo tàng',
     example: '',
     title: '',
-    pronun: 'bảo tàng'
+    pronun: 'bách vật quán'
 },
 {
     word: 'えいがかん',
@@ -768,12 +768,12 @@
     pronun: 'rạp chiếu phim'
 },
 {
-    word: 'とうぶつえん',
+    word: 'どうぶつえん',
     type: '',
     meaning: 'vườn bách thú',
     example: '',
     title: '',
-    pronun: 'vườn bách thú'
+    pronun: 'động vật viên'
 },
 {
     word: 'しょくぶつえん',
@@ -781,7 +781,7 @@
     meaning: 'vườn bách thảo',
     example: '',
     title: '',
-    pronun: 'vườn bách thảo'
+    pronun: 'thực vật viên'
 },
 {
     word: 'ゆうえんち',
@@ -797,7 +797,7 @@
     meaning: 'chùa',
     example: '',
     title: '',
-    pronun: 'chùa'
+    pronun: 'tự'
 },
 {
     word: 'きょうかい',
@@ -805,7 +805,7 @@
     meaning: 'nhà thờ',
     example: '',
     title: '',
-    pronun: 'nhà thờ'
+    pronun: 'giáo giới'
 },
 {
     word: 'しやくしょ',
@@ -813,7 +813,7 @@
     meaning: 'văn phòng hành chính',
     example: '',
     title: '',
-    pronun: 'văn phòng hành chính'
+    pronun: 'thị dịch sở'
 },
 {
     word: 'けいさつしょ',
@@ -821,15 +821,15 @@
     meaning: 'đồn cảnh sát',
     example: '',
     title: '',
-    pronun: 'đồn cảnh sát'
+    pronun: 'cảnh sát thự'
 },
 {
-    word: 'ちゆうしゃじょう',
+    word: 'ちゅうしゃじょう',
     type: '',
     meaning: 'bãi đỗ xe',
     example: '',
     title: '',
-    pronun: 'bãi đỗ xe'
+    pronun: 'trú xa tràng'
 },
 {
     word: 'やおや',
@@ -848,11 +848,627 @@
     pronun: 'cửa hàng thịt'
 },
 {
-    word: 'ぜんぶ',
+    word: 'つけます',
     type: '',
-    meaning: '',
+    meaning: 'bật',
     example: '',
     title: '',
-    pronun: 'tất cả'
+    pronun: 'bật (đèn)'
+},
+{
+    word: 'けします',
+    type: '',
+    meaning: 'tắt',
+    example: '',
+    title: '',
+    pronun: 'tắt (đèn)'
+},
+{
+    word: 'あけます',
+    type: '',
+    meaning: 'mở',
+    example: '',
+    title: '',
+    pronun: 'mở (cửa)'
+},
+{
+    word: 'しめます',
+    type: '',
+    meaning: 'đóng',
+    example: '',
+    title: '',
+    pronun: 'đóng (cửa)'
+},
+{
+    word: 'いそぎます',
+    type: '',
+    meaning: 'vội, gấp',
+    example: '',
+    title: '',
+    pronun: 'vội, gấp'
+},
+{
+    word: 'まちます',
+    type: '',
+    meaning: 'đợi, chờ',
+    example: '',
+    title: '',
+    pronun: 'đợi, chờ'
+},
+{
+    word: 'もちます',
+    type: '',
+    meaning: 'mang, cầm',
+    example: '',
+    title: '',
+    pronun: 'mang, cầm'
+},
+{
+    word: 'とります',
+    type: '',
+    meaning: 'lấy, chuyển',
+    example: '',
+    title: '',
+    pronun: 'lấy, chuyển'
+},
+{
+    word: 'てつだいます',
+    type: '',
+    meaning: 'giúp',
+    example: '',
+    title: '',
+    pronun: 'giúp'
+},
+{
+    word: 'よびます',
+    type: '',
+    meaning: 'gọi',
+    example: '',
+    title: '',
+    pronun: 'gọi'
+},
+{
+    word: 'はなします',
+    type: '',
+    meaning: 'nói chuyện',
+    example: '',
+    title: '',
+    pronun: 'nói chuyện'
+},
+{
+    word: 'つかいます',
+    type: '',
+    meaning: 'dùng, sử dụng',
+    example: '',
+    title: '',
+    pronun: 'dùng, sử dụng'
+},
+{
+    word: 'とめます',
+    type: '',
+    meaning: 'dừng, đỗ',
+    example: '',
+    title: '',
+    pronun: 'dừng, đỗ'
+},
+{
+    word: 'みせます',
+    type: '',
+    meaning: 'cho xem, trình',
+    example: '',
+    title: '',
+    pronun: 'cho xem, trình'
+},
+{
+    word: 'おしえます',
+    type: '',
+    meaning: 'nói, cho biết',
+    example: '',
+    title: '',
+    pronun: 'nói, cho biết'
+},
+{
+    word: 'すわります',
+    type: '',
+    meaning: 'ngồi',
+    example: '',
+    title: '',
+    pronun: 'ngồi'
+},
+{
+    word: 'たちます',
+    type: '',
+    meaning: 'đứng',
+    example: '',
+    title: '',
+    pronun: 'đứng'
+},
+{
+    word: 'はいります',
+    type: '',
+    meaning: 'vào',
+    example: '',
+    title: '',
+    pronun: 'vào'
+},
+{
+    word: 'でます',
+    type: '',
+    meaning: 'ra khỏi',
+    example: '',
+    title: '',
+    pronun: 'ra khỏi'
+},
+{
+    word: 'ふります',
+    type: '',
+    meaning: 'mưa',
+    example: '',
+    title: '',
+    pronun: 'mưa'
+},
+{
+    word: 'じゅうしょ',
+    type: '',
+    meaning: 'địa chỉ',
+    example: '',
+    title: '',
+    pronun: 'địa chỉ'
+},
+{
+    word: 'しお',
+    type: '',
+    meaning: 'muối',
+    example: '',
+    title: '',
+    pronun: 'muối'
+},
+{
+    word: 'さとう',
+    type: '',
+    meaning: 'đường ăn',
+    example: '',
+    title: '',
+    pronun: 'đường ăn'
+},
+{
+    word: 'もんだい',
+    type: '',
+    meaning: 'câu hỏi, vấn đề',
+    example: '',
+    title: '',
+    pronun: 'câu hỏi, vấn đề'
+},
+{
+    word: 'こたえ',
+    type: '',
+    meaning: 'câu trả lời',
+    example: '',
+    title: '',
+    pronun: 'câu trả lời'
+},
+{
+    word: 'よみかた',
+    type: '',
+    meaning: 'cách đọc',
+    example: '',
+    title: '',
+    pronun: 'cách đọc'
+},
+{
+    word: 'のみかた',
+    type: '',
+    meaning: 'cách uống',
+    example: '',
+    title: '',
+    pronun: 'cách uống'
+},
+{
+    word: 'まっすぐ',
+    type: '',
+    meaning: 'thẳng',
+    example: '',
+    title: '',
+    pronun: 'thẳng'
+},
+{
+    word: 'ゆっくり',
+    type: '',
+    meaning: 'chậm, thong thả',
+    example: '',
+    title: '',
+    pronun: 'chậm, thong thả'
+},
+{
+    word: 'すぐ',
+    type: '',
+    meaning: 'ngay lập tức',
+    example: '',
+    title: '',
+    pronun: 'ngay lập tức'
+},
+{
+    word: 'あとで',
+    type: '',
+    meaning: 'sau',
+    example: '',
+    title: '',
+    pronun: 'sau'
+},
+{
+    word: 'もうすこし',
+    type: '',
+    meaning: 'thêm chút nữa',
+    example: '',
+    title: '',
+    pronun: 'thêm chút nữa'
+},
+{
+    word: 'おきます',
+    type: '',
+    meaning: 'đặt để',
+    example: '',
+    title: '',
+    pronun: ''
+},
+{
+    word: 'つくります',
+    type: '',
+    meaning: 'làm, chế tạo',
+    example: '',
+    title: '',
+    pronun: 'sang'
+},
+{
+    word: 'うります',
+    type: '',
+    meaning: 'bán',
+    example: '',
+    title: '',
+    pronun: 'mại'
+},
+{
+    word: 'しります',
+    type: '',
+    meaning: 'biết',
+    example: '',
+    title: '',
+    pronun: 'tri'
+},
+{
+    word: 'すみます',
+    type: '',
+    meaning: 'sống, ở',
+    example: '',
+    title: '',
+    pronun: 'trụ'
+},
+{
+    word: 'けんきゅうします',
+    type: '',
+    meaning: 'nghiên cứu',
+    example: '',
+    title: '',
+    pronun: 'nghiên cứu'
+},
+{
+    word: 'しりょう',
+    type: '',
+    meaning: 'tài liệu',
+    example: '',
+    title: '',
+    pronun: 'tư liêu'
+},
+{
+    word: 'じこくひょう',
+    type: '',
+    meaning: 'bảng giờ chạy tàu',
+    example: '',
+    title: '',
+    pronun: '時刻表| Thời khóa biểu'
+},
+{
+    word: 'ふく',
+    type: '',
+    meaning: 'quần áo',
+    example: '',
+    title: '',
+    pronun: '服 | phục'
+},
+{
+    word: 'せいひん',
+    type: '',
+    meaning: 'sản phẩm',
+    example: '',
+    title: '',
+    pronun: '製品| chế phẩm'
+},
+{
+    word: 'でんしじしょ',
+    type: '',
+    meaning: 'kim từ điển',
+    example: '',
+    title: '',
+    pronun: '電子辞書 | Điện tử từ thư'
+},
+{
+    word: 'けいざい',
+    type: '',
+    meaning: 'kinh tế',
+    example: '',
+    title: '',
+    pronun: '経済 | Kinh tế'
+},
+{
+    word: 'しやくしょ',
+    type: '',
+    meaning: 'tòa thị chính',
+    example: '',
+    title: '',
+    pronun: '市役所 | Thị dịch sở'
+},
+{
+    word: 'こうこう',
+    type: '',
+    meaning: 'trường cấp 3',
+    example: '',
+    title: '',
+    pronun: '高校 | Cao giáo'
+},
+{
+    word: 'はいしゃ',
+    type: '',
+    meaning: 'nha sĩ',
+    example: '',
+    title: '',
+    pronun: '歯医者 | Xỉ y giả'
+},
+{
+    word: 'どくしん',
+    type: '',
+    meaning: 'độc thân',
+    example: '',
+    title: '',
+    pronun: '独身 | Độc thân'
+},
+{
+    word: 'のります',
+    type: '',
+    meaning: 'đi, lên tàu',
+    example: '',
+    title: '',
+    pronun: '乗る | Thừa'
+},
+{
+    word: 'おります',
+    type: '',
+    meaning: 'xuống tàu',
+    example: '',
+    title: '',
+    pronun: '降りる | Hàng'
+},
+{
+    word: 'のりかえます',
+    type: '',
+    meaning: 'chuyển đổi',
+    example: '',
+    title: '',
+    pronun: '乗り換える| Chuyển đổi'
+},
+{
+    word: 'あびます',
+    type: '',
+    meaning: 'tắm',
+    example: '',
+    title: '',
+    pronun: '浴びる| tắm'
+},
+{
+    word: 'いれます',
+    type: '',
+    meaning: 'bỏ vào, cho vào',
+    example: '',
+    title: '',
+    pronun: '挿れる | sáp'
+},
+{
+    word: 'だします',
+    type: '',
+    meaning: 'lấy ra, gửi',
+    example: '',
+    title: '',
+    pronun: '出す | suất'
+},
+{
+    word: 'おろします',
+    type: '',
+    meaning: 'rút tiền',
+    example: '',
+    title: '',
+    pronun: '下ろす | rút tiền'
+},
+{
+    word: 'はいります',
+    type: '',
+    meaning: 'vào đại học',
+    example: '',
+    title: '',
+    pronun: '入る | đi vào, vào'
+},
+{
+    word: 'でます',
+    type: '',
+    meaning: 'ra, tốt nghiệp đại học',
+    example: '',
+    title: '',
+    pronun: '出る | đi ra, ra'
+},
+{
+    word: 'おします',
+    type: '',
+    meaning: 'bấm, ấn',
+    example: '',
+    title: '',
+    pronun: '押す | áp'
+},
+{
+    word: 'はじめます',
+    type: '',
+    meaning: 'bắt đầu',
+    example: '',
+    title: '',
+    pronun: '始める | bắt đầu'
+},
+{
+    word: 'けんがくします',
+    type: '',
+    meaning: 'tham quan kiến tập',
+    example: '',
+    title: '',
+    pronun: '見学する | kiến học'
+},
+{
+    word: 'でんわします',
+    type: '',
+    meaning: 'gọi điện thoại',
+    example: '',
+    title: '',
+    pronun: '電話する | điện thoại'
+},
+{
+    word: 'わかい',
+    type: '',
+    meaning: 'trẻ',
+    example: '',
+    title: '',
+    pronun: '若い | bé'
+},
+{
+    word: 'ながい',
+    type: '',
+    meaning: 'dài',
+    example: '',
+    title: '',
+    pronun: '長い | dài'
+},
+{
+    word: 'みじかい',
+    type: '',
+    meaning: 'ngắn',
+    example: '',
+    title: '',
+    pronun: '短い | ngắn'
+},
+{
+    word: 'あかるい',
+    type: '',
+    meaning: 'sáng',
+    example: '',
+    title: '',
+    pronun: '明るい | minh'
+},
+{
+    word: 'くらい',
+    type: '',
+    meaning: 'tối',
+    example: '',
+    title: '',
+    pronun: '暗い | ám'
+},
+{
+    word: 'からだ',
+    type: '',
+    meaning: 'cơ thể',
+    example: '',
+    title: '',
+    pronun: '身体 | thân thể'
+},
+{
+    word: 'かみ',
+    type: '',
+    meaning: 'tóc',
+    example: '',
+    title: '',
+    pronun: '髪 | phát'
+},
+{
+    word: 'かお',
+    type: '',
+    meaning: 'mặt',
+    example: '',
+    title: '',
+    pronun: '顔 | nhang'
+},
+{
+    word: 'め',
+    type: '',
+    meaning: 'con mắt',
+    example: '',
+    title: '',
+    pronun: '目 | mục'
+},
+{
+    word: 'みみ',
+    type: '',
+    meaning: 'cái tai',
+    example: '',
+    title: '',
+    pronun: '耳 | nhĩ'
+},
+{
+    word: 'はな',
+    type: '',
+    meaning: 'mũi',
+    example: '',
+    title: '',
+    pronun: '鼻 | tị'
+},
+{
+    word: 'くち',
+    type: '',
+    meaning: 'miệng',
+    example: '',
+    title: '',
+    pronun: '口 | khẩu'
+},
+{
+    word: 'は',
+    type: '',
+    meaning: 'răng',
+    example: '',
+    title: '',
+    pronun: '歯 | xỉ'
+},
+{
+    word: 'あし',
+    type: '',
+    meaning: 'chân',
+    example: '',
+    title: '',
+    pronun: '脚 | cước'
+},
+{
+    word: 'せ',
+    type: '',
+    meaning: 'lưng, chiều cao cơ thể',
+    example: '',
+    title: '',
+    pronun: '背 | bối'
+},
+{
+    word: 'みどり',
+    type: '',
+    meaning: 'màu xanh lá cây, cây xanh',
+    example: '',
+    title: '',
+    pronun: '緑 | lục'
+},
+{
+    word: 'どうやって',
+    type: '',
+    meaning: 'làm thế nào',
+    example: '',
+    title: '',
+    pronun: 'làm thế nào'
 },
 ];

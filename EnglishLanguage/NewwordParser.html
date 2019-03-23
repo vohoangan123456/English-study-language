@@ -1,0 +1,50 @@
+﻿<html>
+<head>
+    <style>
+    </style>
+    <link rel="stylesheet" href="js/jquery-ui.css" />
+    <script language="javascript" type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var rows = [];
+            $("#inputArea").on("change keyup paste", function () {
+                rows = [];
+                var row = [];
+                var currentVal = $(this).val();
+                $('#targetDom').html($(this).val());
+                $("#targetDom tr").each(function () {
+                    if (row.length > 0)
+                        rows.push(row);
+                    $tr = $(this);
+                    row = [];
+                    $tr.find("td").each(function () {
+                        row.push($(this).text());
+                        if (row.length == 4 && row[2] != '') {
+                            $(this).text(row[2] + ' | ' + $(this).text());
+                        }
+                    });
+                });
+                //if (row.length > 0)
+                //    rows.push(row);
+                //rows.forEach(function (value) {
+                //    if (value.length != 5) {
+                //        alert('table format error');
+                //        continue;
+                //    }
+                //    value[2] = value[2] + ' | ' + value[3];
+                //});
+
+            });
+        });
+    </script>
+</head>
+<body id="bodyParser">
+    <form>
+        <textarea rows="20" id="inputArea" style="width: 100%"></textarea>
+    </form>
+    <div id="targetDom">
+
+    </div>
+</body>
+</html>

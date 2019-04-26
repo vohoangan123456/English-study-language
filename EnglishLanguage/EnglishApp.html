@@ -76,6 +76,7 @@
 <script language="javascript" type="text/javascript" src="js/Noun.js"></script>
 <script language="javascript" type="text/javascript" src="js/ImageWords.js"></script>
 <script language="javascript" type="text/javascript" src="js/minanoNihongo.js"></script>
+<script language="javascript" type="text/javascript" src="js/mimikara.js"></script>
 <script type="text/javascript">
 	//store the global word
 	var dataWordObject = [];
@@ -100,6 +101,11 @@
 			if(e.which == 37)	//ctrl
 			{
 				nextRandom();
+				if(tempWordObject.length == 0)
+				{
+					alert("Finish work. Stop typing");
+					reloadPage();
+				}
 			}
 		});
 		$("#txtWord").on('keyup', function(e)
@@ -328,6 +334,35 @@
 						autoCompleteMeaning.push(value.meaning);
 					});
 					break;
+				case "mimikara":
+					$("[value = 'vietnamese']").show();
+					$("[value = 'english']").show();
+					$("[value = 'write_hira']").hide();
+					$("[value = 'write_kanji_hira']").hide();
+					
+					$("[value = 'write_kanji_vietnamese']").hide();
+					$("[value = 'write_vietnamese']").hide();
+					
+					$.each( mimikaraWords, function( index, value )
+					{
+						dataWordObject.push(value);
+						autoCompleteMeaning.push(value.meaning);
+					});
+					break;
+				case "kanji":
+					$("[value = 'vietnamese']").show();
+					$("[value = 'english']").show();
+					$("[value = 'write_hira']").hide();
+					$("[value = 'write_kanji_hira']").hide();
+					
+					$("[value = 'write_kanji_vietnamese']").hide();
+					$("[value = 'write_vietnamese']").hide();
+					
+					$.each( kanjiwords, function( index, value )
+					{
+						dataWordObject.push(value);
+						autoCompleteMeaning.push(value.meaning);
+					});
 				case "imageWord":
 					$("[value = 'write_vietnamese']").hide();
 					$("[value = 'write_kanji_hira']").hide();
@@ -470,6 +505,9 @@
 		$("#randomWord").html(tempWordObject[randomIndex].meaning);
 	});
 	
+	function inputHandler(){
+		
+	}
 	//save data [continue to write into file js]
 	function saveNewWord()
 	{
@@ -515,6 +553,18 @@
 		randomIndex = random(tempWordObject.length);
 		$("#randomWord").html(tempWordObject[randomIndex].meaning);
 		tempWordObject.splice(randomIndex,1);
+		$.each(dataWordObject, function(index, value){
+			if(value.meaning.trim(" ") == $("#randomWord").html().trim(" "))
+			{
+				tempBoolean = true;
+				$(".labelCSS"+index).css("color", "#FB0921");
+				$("#meaningOfText").html(value.word.trim(" ")+ " /" + value.pronun+"/ ("+ value.type.trim(" ")+") "+ value.meaning.trim(" "));
+				var exampleSentence = "<label title='"+ value.title +"'>Ex:" + value.example +"</label>";
+				$("#exampleOfWord").html(exampleSentence);
+				$("#exampleOfWord").css("color","red");					
+				return;
+			}
+		});
 	}
 </script>
 </head>
@@ -532,6 +582,8 @@
 			<option value="kanji-vietnamese">Kanji - vietnamese </option>
 			<option value="japanese_1">japanese_1</option>
 			<option value="minanoNihongo">Minano Nihongo</option>
+			<option value="mimikara">Mimi kara</option>
+			<option value="kanji">Kanji</option>
 		</select>
 	</div>
 	<table style="position: absolute; right:0; left:0; width:100%">

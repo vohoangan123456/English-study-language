@@ -79,7 +79,14 @@
 		$("#showArea").html("");		
 		randomIndex = random(tempWordObject.length);
 		$("#randomWord").html(tempWordObject[randomIndex].meaning);
-		changeModeViewWord(tempWordObject, $("#modeViewWords").val());		
+		changeModeViewWord(tempWordObject, $("#modeViewWords").val());
+		return [rangeBegin, rangeEnd]
+	}
+	
+	function compareTwoWordObj(obj1, obj2){
+		if(obj1.word == obj2.word && obj1.meaning == obj2.meaning && obj1.example == obj2.example && obj1.pronun == obj2.pronun)
+			return true;
+		return false;
 	}
 	
 	//function change mode view the list of words
@@ -96,6 +103,13 @@
 				{
 					numberObjectInLine++;
 					var indexes = checkExist(value.word, dataWordObject, 2);
+					for(var i = 0; i < indexes.length; i++){
+						if(compareTwoWordObj(dataWordObject[indexes[i]], value))
+						{
+							indexes = indexes[i];
+							break;
+						}
+					}
 					initTable = initTable + "<td align='center' class='labelClassCSS" + numberObjectInLine + "'>";
 					var label = "<label class='labelCSS" + indexes + "' title='" + value.meaning + "'>" + value.word + "</label></td>";
 					initTable = initTable + label;
@@ -118,6 +132,13 @@
 				$.each( database, function( index, value )
 				{
 					var indexes = checkExist(value.word, dataWordObject, 2);
+					for(var i = 0; i < indexes.length; i++){
+						if(compareTwoWordObj(dataWordObject[indexes[i]], value))
+						{
+							indexes = indexes[i];
+							break;
+						}
+					}
 					initTable = initTable + "<tr>";
 					//create column words
 					initTable = initTable + "<td align='center' class='viewMode2CSS1'>";

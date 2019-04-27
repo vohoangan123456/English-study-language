@@ -1,963 +1,635 @@
 ﻿var kanjiwords = [
 {
-    word: '一',
-    type: '',
-    meaning: 'nhất',
-    example: 'イチ',
-    title: '',
-    pronun: 'một'
-},
-{
-    word: '九',
-    type: '',
-    meaning: 'cửu',
-    example: 'キュウ・ク',
-    title: '',
-    pronun: 'chín'
-},
-{
-    word: '十',
-    type: '',
-    meaning: 'thập',
-    example: 'ジュウ・ジッ～',
-    title: '',
-    pronun: 'mười'
-},
-{
-    word: '人',
-    type: '',
-    meaning: 'nhân',
-    example: 'ジン・ニン',
-    title: '',
-    pronun: 'người'
-},
-{
-    word: '二',
-    type: '',
-    meaning: 'nhị',
-    example: 'ニ',
-    title: '',
-    pronun: 'hai'
-},
-{
-    word: '入',
-    type: '',
-    meaning: 'nhập',
-    example: 'ニュウ',
-    title: '',
-    pronun: 'vào'
-},
-{
-    word: '八',
-    type: '',
-    meaning: 'bát',
-    example: 'ハチ',
-    title: '',
-    pronun: 'tám'
-},
-{
-    word: '七',
-    type: '',
-    meaning: 'thất',
-    example: 'シチ',
-    title: '',
-    pronun: 'bảy'
-},
-{
-    word: '下',
-    type: '',
-    meaning: 'hạ',
-    example: 'カ',
-    title: '',
-    pronun: 'bên dưới'
-},
-{
-    word: '三',
-    type: '',
-    meaning: 'tam',
-    example: 'サン',
-    title: '',
-    pronun: 'ba, 3'
-},
-{
-    word: '山',
-    type: '',
-    meaning: 'sơn',
-    example: 'サン',
-    title: '',
-    pronun: 'núi, đồi'
-},
-{
-    word: '子',
-    type: '',
-    meaning: 'tử',
-    example: 'シ',
-    title: '',
-    pronun: 'con, cái'
-},
-{
-    word: '女',
-    type: '',
-    meaning: 'nữ',
-    example: 'ジョ・ニョ',
-    title: '',
-    pronun: 'phụ nữ'
-},
-{
-    word: '小',
-    type: '',
-    meaning: 'tiểu',
-    example: 'ショウ',
-    title: '',
-    pronun: 'nhỏ'
-},
-{
-    word: '上',
-    type: '',
-    meaning: 'thượng',
-    example: 'ジョウ',
-    title: '',
-    pronun: 'bên trên'
-},
-{
-    word: '川',
-    type: '',
-    meaning: 'xuyên',
-    example: 'セン',
-    title: '',
-    pronun: 'sông'
-},
-{
-    word: '土',
-    type: '',
-    meaning: 'thổ',
-    example: 'ト・ド',
-    title: '',
-    pronun: 'đất'
-},
-{
-    word: '万',
-    type: '',
-    meaning: 'vạn',
-    example: 'マン・バン',
-    title: '',
-    pronun: 'mười ngàn, nhiều'
-},
-{
-    word: '大',
-    type: '',
-    meaning: 'đại',
-    example: 'ダイ・タイ',
-    title: '',
-    pronun: 'to, lớn'
-},
-{
-    word: '千',
-    type: '',
-    meaning: 'thiên',
-    example: 'セン',
-    title: '',
-    pronun: 'ngàn, nhiều'
-},
-{
-    word: '円',
-    type: '',
-    meaning: 'viên',
-    example: 'エン',
-    title: '',
-    pronun: 'yen, tròn'
-},
-{
-    word: '火',
-    type: '',
-    meaning: 'hỏa',
-    example: 'カ',
-    title: '',
-    pronun: 'lửa'
-},
-{
-    word: '月',
-    type: '',
-    meaning: 'nguyệt',
-    example: 'ゲツ・ガツ',
-    title: '',
-    pronun: 'mặt trăng, tháng'
-},
-{
-    word: '五',
-    type: '',
-    meaning: 'ngũ',
-    example: 'ゴ',
-    title: '',
-    pronun: 'số năm'
-},
-{
-    word: '午',
-    type: '',
-    meaning: 'ngọ',
-    example: 'ゴ',
-    title: '',
-    pronun: 'giữa trưa, giờ ngọ'
-},
-{
-    word: '今',
-    type: '',
-    meaning: 'kim',
-    example: 'コン',
-    title: '',
-    pronun: 'bây giờ, hiện nay'
-},
-{
-    word: '水',
-    type: '',
-    meaning: 'thủy',
-    example: 'スイ',
-    title: '',
-    pronun: 'nước, water'
-},
-{
-    word: '中',
-    type: '',
-    meaning: 'trung',
-    example: 'チュウ・ジュウ',
-    title: '',
-    pronun: 'giữa, trung gian, Trung Quốc'
-},
-{
-    word: '天',
-    type: '',
-    meaning: 'thiên',
-    example: 'テン',
-    title: '',
-    pronun: 'trời, thời tiết'
-},
-{
     word: '日',
     type: '',
     meaning: 'nhật',
-    example: 'ニチ・ニ・ジツ',
-    title: '',
-    pronun: 'ngày, mặt trời, Nhật Bản'
+    example: 'nichi, jitsu|hi, bi',
+    title: 'hi, bi',
+    pronun: 'mặt trời, ngày'
 },
 {
-    word: '父',
+    word: '一',
     type: '',
-    meaning: 'phụ',
-    example: 'フ',
-    title: '',
-    pronun: 'cha'
-},
-{
-    word: '木',
-    type: '',
-    meaning: 'mộc',
-    example: 'モク',
-    title: '',
-    pronun: 'cây, gỗ'
-},
-{
-    word: '友',
-    type: '',
-    meaning: 'hữu',
-    example: 'ユウ',
-    title: '',
-    pronun: 'bạn'
-},
-{
-    word: '六',
-    type: '',
-    meaning: 'lục',
-    example: 'ロク',
-    title: '',
-    pronun: 'số 6'
-},
-{
-    word: '右',
-    type: '',
-    meaning: 'hữu',
-    example: 'ユウ',
-    title: '',
-    pronun: 'bên phải'
-},
-{
-    word: '外',
-    type: '',
-    meaning: 'ngoại',
-    example: 'ガイ',
-    title: '',
-    pronun: 'bên ngoài'
-},
-{
-    word: '左',
-    type: '',
-    meaning: 'tả',
-    example: 'サ',
-    title: '',
-    pronun: 'bên trái'
-},
-{
-    word: '四',
-    type: '',
-    meaning: 'tứ',
-    example: 'シ',
-    title: '',
-    pronun: '4, số bốn, tứ'
-},
-{
-    word: '出',
-    type: '',
-    meaning: 'xuất',
-    example: 'シュツ',
-    title: '',
-    pronun: 'đi ra, tham dự'
-},
-{
-    word: '生',
-    type: '',
-    meaning: 'sinh',
-    example: 'セイ・ショウ',
-    title: '',
-    pronun: 'sống, chỉ người, đời'
-},
-{
-    word: '白',
-    type: '',
-    meaning: 'bạch',
-    example: 'ハク',
-    title: '',
-    pronun: 'trắng'
-},
-{
-    word: '半',
-    type: '',
-    meaning: 'bán',
-    example: 'ハン',
-    title: '',
-    pronun: 'một nửa'
-},
-{
-    word: '母',
-    type: '',
-    meaning: 'mầu',
-    example: 'ボ',
-    title: '',
-    pronun: 'mẹ'
-},
-{
-    word: '北',
-    type: '',
-    meaning: 'bắc',
-    example: 'ホク',
-    title: '',
-    pronun: 'phía bắc'
-},
-{
-    word: '本',
-    type: '',
-    meaning: 'bản',
-    example: 'ホン',
-    title: '',
-    pronun: 'sách; gốc, nguyên bản'
-},
-{
-    word: '気',
-    type: '',
-    meaning: 'khí',
-    example: 'キ',
-    title: '',
-    pronun: 'chất khí, tinh thần, yêu thích'
-},
-{
-    word: '休',
-    type: '',
-    meaning: 'hưu',
-    example: 'キュウ',
-    title: '',
-    pronun: 'nghỉ ngơi'
-},
-{
-    word: '行',
-    type: '',
-    meaning: 'hành, hàng',
-    example: 'コウ・ギョウ',
-    title: '',
-    pronun: 'đi; ngân hàng'
-},
-{
-    word: '西',
-    type: '',
-    meaning: 'tây',
-    example: 'セイ・サイ',
-    title: '',
-    pronun: 'phía tây'
-},
-{
-    word: '先',
-    type: '',
-    meaning: 'tiên',
-    example: 'セン',
-    title: '',
-    pronun: 'trước'
-},
-{
-    word: '年',
-    type: '',
-    meaning: 'niên',
-    example: 'ネン',
-    title: '',
-    pronun: 'năm'
-},
-{
-    word: '百',
-    type: '',
-    meaning: 'bách',
-    example: 'ヒャク',
-    title: '',
-    pronun: '100, nhiều'
-},
-{
-    word: '毎',
-    type: '',
-    meaning: 'mỗi',
-    example: 'マイ',
-    title: '',
-    pronun: '"mỗi (cái,ngày..) hàng (ngày, năm..)"'
-},
-{
-    word: '名',
-    type: '',
-    meaning: 'danh',
-    example: 'メイ',
-    title: '',
-    pronun: 'tên'
-},
-{
-    word: '何',
-    type: '',
-    meaning: 'hà',
-    example: '',
-    title: '',
-    pronun: 'cái gì'
-},
-{
-    word: '見',
-    type: '',
-    meaning: 'kiến',
-    example: 'ケン',
-    title: '',
-    pronun: 'nhìn, thấy'
-},
-{
-    word: '車',
-    type: '',
-    meaning: 'xa',
-    example: 'シャ',
-    title: '',
-    pronun: 'xe, xe hơi'
-},
-{
-    word: '男',
-    type: '',
-    meaning: 'nam',
-    example: 'ダン・ナン',
-    title: '',
-    pronun: 'nam giới, đàn ông'
-},
-{
-    word: '来',
-    type: '',
-    meaning: 'lai',
-    example: 'ライ',
-    title: '',
-    pronun: 'đi tới (đây)'
-},
-{
-    word: '雨',
-    type: '',
-    meaning: 'vũ',
-    example: 'ウ',
-    title: '',
-    pronun: 'mưa'
-},
-{
-    word: '学',
-    type: '',
-    meaning: 'học',
-    example: 'ガク',
-    title: '',
-    pronun: 'học'
-},
-{
-    word: '金',
-    type: '',
-    meaning: 'kim',
-    example: 'キン',
-    title: '',
-    pronun: 'tiền, vàng'
+    meaning: 'nhất',
+    example: 'ichi, itsu|hito',
+    title: 'hito',
+    pronun: 'một; đồng nhất'
 },
 {
     word: '国',
     type: '',
     meaning: 'quốc',
-    example: 'コク',
+    example: 'koku|kuni',
+    title: 'kuni',
+    pronun: 'nước; quốc gia'
+},
+{
+    word: '人',
+    type: '',
+    meaning: 'nhân',
+    example: 'jin, nin|hito',
+    title: 'hito',
+    pronun: 'nhân vật'
+},
+{
+    word: '年',
+    type: '',
+    meaning: 'niên',
+    example: 'nen|toshi',
+    title: 'toshi',
+    pronun: 'năm; niên đại'
+},
+{
+    word: '大',
+    type: '',
+    meaning: 'đại',
+    example: 'dai, tai',
+    title: 'oo(kii)',
+    pronun: 'to lớn; đại lục'
+},
+{
+    word: '十',
+    type: '',
+    meaning: 'thập',
+    example: 'juu, jiQ',
+    title: 'tou',
+    pronun: 'mười'
+},
+{
+    word: '二',
+    type: '',
+    meaning: 'nhị',
+    example: 'ni',
     title: '',
-    pronun: 'nước'
+    pronun: 'hai'
+},
+{
+    word: '本',
+    type: '',
+    meaning: 'bản',
+    example: '',
+    title: 'hon',
+    pronun: 'sách, cơ bản, bản chất'
+},
+{
+    word: '中',
+    type: '',
+    meaning: 'trung',
+    example: 'chuu',
+    title: 'naka',
+    pronun: 'giữa, trung tâm'
 },
 {
     word: '長',
     type: '',
     meaning: 'trường, trưởng',
-    example: 'チョウ',
-    title: '',
-    pronun: 'dài, trưởng (phòng)'
+    example: 'choo',
+    title: 'naga(i)',
+    pronun: 'dài; trưởng'
 },
 {
-    word: '東',
+    word: '出',
     type: '',
-    meaning: 'đông',
-    example: 'トウ',
-    title: '',
-    pronun: 'phía đông'
+    meaning: 'xuất',
+    example: 'shutsu, sui',
+    title: 'de(ru), da(su)',
+    pronun: 'ra, xuất hiện, xuất phát'
 },
 {
-    word: '後',
+    word: '三',
     type: '',
-    meaning: 'hậu',
-    example: 'コウ・ゴ',
-    title: '',
-    pronun: 'phía sau, sau khi'
-},
-{
-    word: '食',
-    type: '',
-    meaning: 'thực',
-    example: 'ショク',
-    title: '',
-    pronun: 'ăn'
-},
-{
-    word: '前',
-    type: '',
-    meaning: 'tiền',
-    example: 'ゼン',
-    title: '',
-    pronun: 'trước đây, phía trước'
-},
-{
-    word: '南',
-    type: '',
-    meaning: 'nam',
-    example: 'ナン',
-    title: '',
-    pronun: 'phía nam'
-},
-{
-    word: '校',
-    type: '',
-    meaning: 'hiệu',
-    example: 'コウ',
-    title: '',
-    pronun: 'trường học'
-},
-{
-    word: '高',
-    type: '',
-    meaning: 'cao',
-    example: 'コウ',
-    title: '',
-    pronun: 'cao, đắt (cao giá)'
-},
-{
-    word: '書',
-    type: '',
-    meaning: 'thư',
-    example: 'ショ',
-    title: '',
-    pronun: 'viết, văn bản'
+    meaning: 'tam',
+    example: 'san',
+    title: 'mi(tsu)',
+    pronun: 'ba'
 },
 {
     word: '時',
     type: '',
     meaning: 'thời',
-    example: 'ジ',
-    title: '',
+    example: 'ji',
+    title: 'toki',
     pronun: 'thời gian'
+},
+{
+    word: '行',
+    type: '',
+    meaning: 'hành, hàng',
+    example: 'koo, gyoo',
+    title: 'i(ku), okonau',
+    pronun: 'thực hành;ngân hàng, đi'
+},
+{
+    word: '見',
+    type: '',
+    meaning: 'kiến',
+    example: 'ken',
+    title: 'miru',
+    pronun: 'nhìn; ý kiến'
+},
+{
+    word: '月',
+    type: '',
+    meaning: 'nguyệt',
+    example: 'getsu, gatsu',
+    title: 'tsuki',
+    pronun: 'mặt trăng, tháng'
+},
+{
+    word: '後',
+    type: '',
+    meaning: 'hậu',
+    example: 'go, koo',
+    title: 'ato',
+    pronun: 'sau'
+},
+{
+    word: '前',
+    type: '',
+    meaning: 'tiền',
+    example: 'zen',
+    title: 'mae',
+    pronun: 'trước'
+},
+{
+    word: '生',
+    type: '',
+    meaning: 'sinh',
+    example: 'sei, shoo',
+    title: 'ikiru',
+    pronun: 'sống; học sinh(chỉ người)'
+},
+{
+    word: '五',
+    type: '',
+    meaning: 'ngũ',
+    example: 'go',
+    title: 'itsutsu',
+    pronun: 'năm (5)'
 },
 {
     word: '間',
     type: '',
     meaning: 'gian',
-    example: 'カン',
-    title: '',
-    pronun: 'ở giữa, trung gian'
+    example: 'kan, ken',
+    title: 'aida',
+    pronun: 'trung gian, không gian'
 },
 {
-    word: '電',
+    word: '友',
     type: '',
-    meaning: 'điện',
-    example: 'デン',
+    meaning: 'hữu',
+    example: 'yuu',
+    title: 'tomo',
+    pronun: 'bạn'
+},
+{
+    word: '上',
+    type: '',
+    meaning: 'thượng',
+    example: 'joo, shoo',
+    title: 'ue, kami',
+    pronun: 'trên'
+},
+{
+    word: '東',
+    type: '',
+    meaning: 'đông',
+    example: 'too',
+    title: 'higashi (azuma)',
+    pronun: 'phía đông'
+},
+{
+    word: '四',
+    type: '',
+    meaning: 'tứ',
+    example: 'shi',
+    title: 'yotsu',
+    pronun: 'bốn'
+},
+{
+    word: '今',
+    type: '',
+    meaning: 'kim',
+    example: 'kon, kin',
+    title: 'ima',
+    pronun: 'hiện tại, lúc này'
+},
+{
+    word: '金',
+    type: '',
+    meaning: 'kim',
+    example: 'kin, kon',
+    title: 'kane',
+    pronun: 'vàng, kim loại'
+},
+{
+    word: '九',
+    type: '',
+    meaning: 'cửu',
+    example: 'kyuu, ku',
+    title: 'kokonotsu',
+    pronun: 'chín (9)'
+},
+{
+    word: '入',
+    type: '',
+    meaning: 'nhập',
+    example: 'nyuu',
+    title: 'hairu, ireru',
+    pronun: 'vào; nhập môn'
+},
+{
+    word: '学',
+    type: '',
+    meaning: 'học',
+    example: 'gaku',
+    title: 'manabu',
+    pronun: 'học'
+},
+{
+    word: '高',
+    type: '',
+    meaning: 'cao',
+    example: 'koo',
+    title: 'takai',
+    pronun: 'cao'
+},
+{
+    word: '円',
+    type: '',
+    meaning: 'viên',
+    example: 'en',
+    title: 'marui',
+    pronun: 'tròn; tiền Yên'
+},
+{
+    word: '子',
+    type: '',
+    meaning: 'tử',
+    example: 'shi, su',
+    title: 'ko',
+    pronun: 'con, phần tử'
+},
+{
+    word: '外',
+    type: '',
+    meaning: 'ngoại',
+    example: 'gai, ge',
+    title: 'soto',
+    pronun: 'bên ngoài'
+},
+{
+    word: '八',
+    type: '',
+    meaning: 'bát',
+    example: 'hachi',
+    title: 'yatsu',
+    pronun: 'tám'
+},
+{
+    word: '六',
+    type: '',
+    meaning: 'lục',
+    example: 'roku',
+    title: 'mutsu',
+    pronun: 'sáu'
+},
+{
+    word: '下',
+    type: '',
+    meaning: 'hạ',
+    example: 'ka, ge',
+    title: 'shita, shimo',
+    pronun: 'dưới'
+},
+{
+    word: '来',
+    type: '',
+    meaning: 'lai',
+    example: 'rai',
+    title: 'kuru',
+    pronun: 'đến; tương lai, vị lai'
+},
+{
+    word: '左',
+    type: '',
+    meaning: 'tả',
+    example: 'sa',
+    title: 'hidar',
+    pronun: 'trái, bên trái'
+},
+{
+    word: '気',
+    type: '',
+    meaning: 'khí',
+    example: 'ki, ke',
     title: '',
-    pronun: 'điện'
+    pronun: 'không khí, khí chất'
+},
+{
+    word: '小',
+    type: '',
+    meaning: 'tiểu',
+    example: 'shoo',
+    title: 'chiisai, ko',
+    pronun: 'nhỏ, ít'
+},
+{
+    word: '七',
+    type: '',
+    meaning: 'thất',
+    example: 'shichi',
+    title: 'nana, nanatsu',
+    pronun: 'bảy (7)'
+},
+{
+    word: '山',
+    type: '',
+    meaning: 'sơn',
+    example: 'san',
+    title: 'yama',
+    pronun: 'núi, sơn hà'
 },
 {
     word: '話',
     type: '',
     meaning: 'thoại',
-    example: 'ワ',
-    title: '',
-    pronun: 'nói chuyện'
+    example: 'wa',
+    title: 'hanashi',
+    pronun: 'nói chuyện, đối thoại'
 },
 {
-    word: '読',
+    word: '女',
     type: '',
-    meaning: 'độc',
-    example: 'ドク',
+    meaning: 'nữ',
+    example: 'jo, nyo',
+    title: 'onna',
+    pronun: 'phụ nữ'
+},
+{
+    word: '北',
+    type: '',
+    meaning: 'bắc',
+    example: 'hoku',
+    title: 'kita',
+    pronun: 'phía bắc'
+},
+{
+    word: '午',
+    type: '',
+    meaning: 'ngọ',
+    example: 'go',
+    title: 'uma',
+    pronun: 'buổi chưa, ngọ'
+},
+{
+    word: '百',
+    type: '',
+    meaning: 'bách',
+    example: 'hyaku',
     title: '',
-    pronun: 'đọc'
+    pronun: 'trăm'
+},
+{
+    word: '書',
+    type: '',
+    meaning: 'thư',
+    example: 'sho',
+    title: 'kaku',
+    pronun: 'viết; thư đạo'
+},
+{
+    word: '先',
+    type: '',
+    meaning: 'tiên',
+    example: 'sen',
+    title: 'saki',
+    pronun: 'trước'
+},
+{
+    word: '名',
+    type: '',
+    meaning: 'danh',
+    example: 'mei, myoo',
+    title: 'na',
+    pronun: 'tên'
+},
+{
+    word: '川',
+    type: '',
+    meaning: 'xuyên',
+    example: 'sen',
+    title: 'kawa',
+    pronun: 'sông'
+},
+{
+    word: '千',
+    type: '',
+    meaning: 'thiên',
+    example: 'sen',
+    title: 'chi',
+    pronun: 'nghìn'
+},
+{
+    word: '休',
+    type: '',
+    meaning: 'hưu',
+    example: 'kyuu',
+    title: 'yasumu',
+    pronun: 'nghỉ ngơi, về hưu'
+},
+{
+    word: '父',
+    type: '',
+    meaning: 'phụ',
+    example: 'fu',
+    title: 'chichi',
+    pronun: 'cha'
+},
+{
+    word: '水',
+    type: '',
+    meaning: 'thủy',
+    example: 'sui',
+    title: 'mizu',
+    pronun: 'nước'
+},
+{
+    word: '半',
+    type: '',
+    meaning: 'bán',
+    example: 'han',
+    title: 'nakaba',
+    pronun: 'một nửa'
+},
+{
+    word: '男',
+    type: '',
+    meaning: 'nam',
+    example: 'dan, nan',
+    title: 'otoko',
+    pronun: 'nam giới'
+},
+{
+    word: '西',
+    type: '',
+    meaning: 'tây',
+    example: 'sei, sai',
+    title: 'nishi',
+    pronun: 'phía tây'
+},
+{
+    word: '電',
+    type: '',
+    meaning: 'điện',
+    example: '',
+    title: 'den',
+    pronun: 'điện, điện lực'
+},
+{
+    word: '校',
+    type: '',
+    meaning: 'hiệu',
+    example: '',
+    title: 'koo',
+    pronun: 'trường học'
 },
 {
     word: '語',
     type: '',
     meaning: 'ngữ',
-    example: 'ゴ',
-    title: '',
-    pronun: 'kể, từ ngữ'
+    example: 'go',
+    title: 'kataru',
+    pronun: 'ngôn ngữ, từ ngữ'
+},
+{
+    word: '土',
+    type: '',
+    meaning: 'thổ',
+    example: 'do, to',
+    title: 'tsuchi',
+    pronun: 'đất; thổ địa'
+},
+{
+    word: '木',
+    type: '',
+    meaning: 'mộc',
+    example: 'boku, moku',
+    title: 'ki',
+    pronun: 'cây, gỗ'
 },
 {
     word: '聞',
     type: '',
     meaning: 'văn',
-    example: 'ブン',
-    title: '',
-    pronun: 'nghe, báo chí'
+    example: 'bun, mon',
+    title: 'kiku',
+    pronun: 'nghe, tân văn (báo)'
 },
 {
-    word: '力',
+    word: '食',
     type: '',
-    meaning: 'lực',
-    example: 'リョク',
-    title: '',
-    pronun: 'sức, lực'
+    meaning: 'thực',
+    example: 'shoku',
+    title: 'taberu',
+    pronun: 'ăn'
 },
 {
-    word: '口',
+    word: '車',
     type: '',
-    meaning: 'khẩu',
-    example: 'コウ',
-    title: '',
-    pronun: 'miệng, cổng'
+    meaning: 'xa',
+    example: 'sha',
+    title: 'kuruma',
+    pronun: 'xe'
 },
 {
-    word: '工',
+    word: '何',
     type: '',
-    meaning: 'công',
-    example: 'コウ',
-    title: '',
-    pronun: 'công việc, công nghiệp'
+    meaning: 'hà',
+    example: 'kai',
+    title: 'nan, nani',
+    pronun: 'cái gì, hà cớ = lẽ gì'
 },
 {
-    word: '夕',
+    word: '南',
     type: '',
-    meaning: 'tịch',
-    example: 'セキ',
-    title: '',
-    pronun: 'chiều tà'
+    meaning: 'nam',
+    example: 'nan | minami',
+    title: 'nan | minami',
+    pronun: 'phía nam'
 },
 {
-    word: '手',
+    word: '万',
     type: '',
-    meaning: 'thủ',
-    example: 'シュ',
-    title: '',
-    pronun: 'tay, người'
+    meaning: 'vạn',
+    example: '',
+    title: 'man, ban',
+    pronun: 'vạn, nhiều; vạn vật'
 },
 {
-    word: '牛',
+    word: '毎',
     type: '',
-    meaning: 'ngưu',
-    example: 'ギュウ',
-    title: '',
-    pronun: 'con bò'
+    meaning: 'mỗi',
+    example: 'mai',
+    title: 'goto',
+    pronun: 'mỗi (vd: mỗi người)'
 },
 {
-    word: '犬',
+    word: '白',
     type: '',
-    meaning: 'khuyển',
-    example: 'ケン',
-    title: '',
-    pronun: 'con chó'
+    meaning: 'bạch',
+    example: 'haku, byaku',
+    title: 'shiroi',
+    pronun: 'trắng, sạch'
 },
 {
-    word: '元',
+    word: '天',
     type: '',
-    meaning: 'nguyên',
-    example: 'ゲン',
-    title: '',
-    pronun: 'gốc, điểm ban đầu'
+    meaning: 'thiên',
+    example: 'ten',
+    title: 'ama',
+    pronun: 'trời, thiên đường'
 },
 {
-    word: '公',
+    word: '母',
     type: '',
-    meaning: 'công',
-    example: 'コウ',
-    title: '',
-    pronun: 'công cộng'
+    meaning: 'mẫu',
+    example: 'bo',
+    title: 'haha, okaasan',
+    pronun: 'mẹ'
 },
 {
-    word: '止',
+    word: '火',
     type: '',
-    meaning: 'chỉ',
-    example: 'シ',
-    title: '',
-    pronun: 'dừng lại'
+    meaning: 'hỏa',
+    example: 'ka',
+    title: 'hi',
+    pronun: 'lửa'
 },
 {
-    word: '少',
+    word: '右',
     type: '',
-    meaning: 'thiếu, thiểu',
-    example: 'ショウ',
-    title: '',
-    pronun: 'ít, nhỏ'
+    meaning: 'hữu',
+    example: 'u, yuu',
+    title: 'migi',
+    pronun: 'phải, bên phải'
 },
 {
-    word: '心',
+    word: '読',
     type: '',
-    meaning: 'tâm',
-    example: 'シン',
-    title: '',
-    pronun: 'tim, tấm lòng'
+    meaning: 'độc',
+    example: 'doku',
+    title: 'yomu',
+    pronun: 'đọc'
 },
 {
-    word: '切',
+    word: '雨',
     type: '',
-    meaning: 'thiết',
-    example: 'セツ',
-    title: '',
-    pronun: 'cắt'
-},
-{
-    word: '不',
-    type: '',
-    meaning: 'bất',
-    example: 'フ',
-    title: '',
-    pronun: 'không, phủ định'
-},
-{
-    word: '文',
-    type: '',
-    meaning: 'văn',
-    example: 'ブン',
-    title: '',
-    pronun: 'lời văn, văn hóa'
-},
-{
-    word: '方',
-    type: '',
-    meaning: 'phương',
-    example: 'ホウ',
-    title: '',
-    pronun: 'phương hướng'
-},
-{
-    word: '以',
-    type: '',
-    meaning: 'dĩ',
-    example: 'イ',
-    title: '',
-    pronun: 'lấy từ ~, tính từ ~'
-},
-{
-    word: '去',
-    type: '',
-    meaning: 'khứ',
-    example: 'キョ',
-    title: '',
-    pronun: 'rời bỏ'
-},
-{
-    word: '兄',
-    type: '',
-    meaning: 'huynh',
-    example: 'キョウ',
-    title: '',
-    pronun: 'anh trai'
-},
-{
-    word: '古',
-    type: '',
-    meaning: 'cổ',
-    example: 'コ',
-    title: '',
-    pronun: 'cũ'
-},
-{
-    word: '広',
-    type: '',
-    meaning: 'quảng',
-    example: 'コウ',
-    title: '',
-    pronun: 'rộng'
-},
-{
-    word: '主',
-    type: '',
-    meaning: 'chủ',
-    example: 'シュ',
-    title: '',
-    pronun: 'chủ yếu, làm chủ'
-},
-{
-    word: '世',
-    type: '',
-    meaning: 'thế',
-    example: 'セ',
-    title: '',
-    pronun: 'thế giới'
-},
-{
-    word: '正',
-    type: '',
-    meaning: 'chính',
-    example: 'セイ',
-    title: '',
-    pronun: 'đúng đắn'
-},
-{
-    word: '代',
-    type: '',
-    meaning: 'đại',
-    example: 'ダイ',
-    title: '',
-    pronun: 'thay mặt, tiền ngang giá'
-},
-{
-    word: '台',
-    type: '',
-    meaning: 'dài',
-    example: 'ダイ',
-    title: '',
-    pronun: 'cái bệ, bồn, đài cao'
-},
-{
-    word: '田',
-    type: '',
-    meaning: 'điền',
-    example: 'デン',
-    title: '',
-    pronun: 'ruộng'
-},
-{
-    word: '冬',
-    type: '',
-    meaning: 'đông',
-    example: 'トウ',
-    title: '',
-    pronun: 'mùa đông'
-},
-{
-    word: '目',
-    type: '',
-    meaning: 'mục',
-    example: 'モク',
-    title: '',
-    pronun: 'mắt'
-},
-{
-    word: '用',
-    type: '',
-    meaning: 'dụng',
-    example: 'ヨウ',
-    title: '',
-    pronun: 'dùng, sử dụng'
-},
-{
-    word: '立',
-    type: '',
-    meaning: 'lập',
-    example: 'リツ',
-    title: '',
-    pronun: 'đứng, thiết lập'
-},
-{
-    word: '写',
-    type: '',
-    meaning: 'tả',
-    example: 'シャ',
-    title: '',
-    pronun: 'sao chép, ảnh'
-},
-{
-    word: '多',
-    type: '',
-    meaning: 'đa',
-    example: 'タ',
-    title: '',
-    pronun: 'nhiều'
-},
-{
-    word: '安',
-    type: '',
-    meaning: 'an',
-    example: 'アン',
-    title: '',
-    pronun: 'rẻ, an tâm, yên ổn'
-},
-{
-    word: '会',
-    type: '',
-    meaning: 'hội',
-    example: 'カイ',
-    title: '',
-    pronun: 'gặp gỡ, hiệp hội'
-},
-{
-    word: '考',
-    type: '',
-    meaning: 'khảo',
-    example: 'コウ',
-    title: '',
-    pronun: 'suy nghĩ'
-},
-{
-    word: '死',
-    type: '',
-    meaning: 'tử',
-    example: 'シ',
-    title: '',
-    pronun: 'chết'
-},
-{
-    word: '字',
-    type: '',
-    meaning: 'tự',
-    example: 'ジ',
-    title: '',
-    pronun: 'chữ'
-},
-{
-    word: '自',
-    type: '',
-    meaning: 'tự',
-    example: 'ジ',
-    title: '',
-    pronun: 'tự mình, tự thân'
-},
-{
-    word: '色',
-    type: '',
-    meaning: 'sắc',
-    example: 'ショク・シキ',
-    title: '',
-    pronun: 'màu, dục'
-},
-{
-    word: '早',
-    type: '',
-    meaning: 'tảo',
-    example: 'ソウ',
-    title: '',
-    pronun: 'sớm'
+    meaning: 'vũ',
+    example: 'u',
+    title: 'ame',
+    pronun: 'mưa'
 },
 {
     word: '力',
@@ -1434,7 +1106,7 @@
 {
     word: '私',
     type: '',
-    meaning: 'tƣ',
+    meaning: 'tư',
     example: 'シ | わたくし; わたし',
     title: '',
     pronun: 'cá nhân'
@@ -1778,7 +1450,7 @@
 {
     word: '研',
     type: '',
-    meaning: 'cứu',
+    meaning: 'nghiên',
     example: 'ケン | と.ぐ',
     title: '',
     pronun: 'nghiên cứu'
@@ -1994,10 +1666,10 @@
 {
     word: '転',
     type: '',
-    meaning: 'truyền',
+    meaning: 'chuyển',
     example: 'テン | ころ.がる; ころ.げる; ころ.がす; ころ.ぶ; まろ.ぶ; うたた;うつ.る',
     title: '',
-    pronun: 'lan truyền'
+    pronun: 'di chuyển, vận chuyển'
 },
 {
     word: '族',
@@ -2194,7 +1866,7 @@
 {
     word: '森',
     type: '',
-    meaning: 'lâm',
+    meaning: 'sâm',
     example: 'シン | もり',
     title: '',
     pronun: 'rừng rậm'
@@ -3101,7 +2773,7 @@
     meaning: 'đầu',
     example: 'トウ',
     title: '',
-    pronun: 'Đầu tƣ'
+    pronun: 'Đầu tư'
 },
 {
     word: '対',
@@ -4262,5 +3934,1501 @@
     example: 'ソン',
     title: '',
     pronun: 'Cháu'
+},
+{
+    word: '速',
+    type: '',
+    meaning: 'tốc',
+    example: 'ソク',
+    title: '',
+    pronun: 'Tốc độ'
+},
+{
+    word: '能',
+    type: '',
+    meaning: 'năng',
+    example: 'ノウ',
+    title: '',
+    pronun: 'Năng lực'
+},
+{
+    word: '配',
+    type: '',
+    meaning: 'phối',
+    example: 'ハイ',
+    title: '',
+    pronun: 'Phân phối'
+},
+{
+    word: '倍',
+    type: '',
+    meaning: 'bội',
+    example: 'バイ',
+    title: '',
+    pronun: 'Bội số'
+},
+{
+    word: '倍',
+    type: '',
+    meaning: 'bội',
+    example: 'バイ',
+    title: '',
+    pronun: 'Bội số'
+},
+{
+    word: '破',
+    type: '',
+    meaning: 'phá',
+    example: 'ハ',
+    title: '',
+    pronun: 'Xé, bể'
+},
+{
+    word: '馬',
+    type: '',
+    meaning: 'mã',
+    example: 'バ',
+    title: '',
+    pronun: 'Con ngựa'
+},
+{
+    word: '浴',
+    type: '',
+    meaning: 'dục',
+    example: 'ヨク',
+    title: '',
+    pronun: 'Tắm'
+},
+{
+    word: '容',
+    type: '',
+    meaning: 'dung',
+    example: 'ヨウ',
+    title: '',
+    pronun: 'Hình dáng'
+},
+{
+    word: '流',
+    type: '',
+    meaning: 'lưu',
+    example: 'リュウ; ル',
+    title: '',
+    pronun: 'Dòng nước'
+},
+{
+    word: '留',
+    type: '',
+    meaning: 'lưu',
+    example: 'リュウ; ル',
+    title: '',
+    pronun: 'Ở lại'
+},
+{
+    word: '連',
+    type: '',
+    meaning: 'liên',
+    example: 'レン',
+    title: '',
+    pronun: 'Liên kết'
+},
+{
+    word: '陸',
+    type: '',
+    meaning: 'lục',
+    example: 'リク; ロク',
+    title: '',
+    pronun: 'Đất liền'
+},
+{
+    word: '率',
+    type: '',
+    meaning: 'suất',
+    example: 'ソツ; リツ; シュツ',
+    title: '',
+    pronun: 'Năng suất'
+},
+{
+    word: '略',
+    type: '',
+    meaning: 'lược',
+    example: 'リャク',
+    title: '',
+    pronun: 'Tóm lược'
+},
+{
+    word: '望',
+    type: '',
+    meaning: 'vọng',
+    example: 'ボウ; モウ',
+    title: '',
+    pronun: 'Hi vọng'
+},
+{
+    word: '務',
+    type: '',
+    meaning: 'vụ',
+    example: 'ム',
+    title: '',
+    pronun: 'Nhiệm vụ'
+},
+{
+    word: '敗',
+    type: '',
+    meaning: 'bại',
+    example: 'ハイ',
+    title: '',
+    pronun: 'Thua'
+},
+{
+    word: '部',
+    type: '',
+    meaning: 'bộ',
+    example: 'ブ',
+    title: '',
+    pronun: 'Bộ phận'
+},
+{
+    word: '副',
+    type: '',
+    meaning: 'phó',
+    example: 'フク',
+    title: '',
+    pronun: 'Phụ tá'
+},
+{
+    word: '婦',
+    type: '',
+    meaning: 'phụ',
+    example: 'フ',
+    title: '',
+    pronun: 'Đàn bà'
+},
+{
+    word: '側',
+    type: '',
+    meaning: 'trắc',
+    example: 'ソク',
+    title: '',
+    pronun: 'Phía, cạnh'
+},
+{
+    word: '組',
+    type: '',
+    meaning: 'tổ',
+    example: 'ソ',
+    title: '',
+    pronun: 'Tổ tiên'
+},
+{
+    word: '責',
+    type: '',
+    meaning: 'trách',
+    example: 'セキ',
+    title: '',
+    pronun: 'Trách nhiệm'
+},
+{
+    word: '接',
+    type: '',
+    meaning: 'tiếp',
+    example: 'セツ; ショウ',
+    title: '',
+    pronun: 'Tiếp xúc'
+},
+{
+    word: '船',
+    type: '',
+    meaning: 'thuyền',
+    example: 'セン',
+    title: '',
+    pronun: 'Cai thuyền'
+},
+{
+    word: '商',
+    type: '',
+    meaning: 'thương',
+    example: 'ショウ',
+    title: '',
+    pronun: 'Buôn bán'
+},
+{
+    word: '設',
+    type: '',
+    meaning: 'thiết',
+    example: 'セツ',
+    title: '',
+    pronun: 'Thiết lập'
+},
+{
+    word: '雪',
+    type: '',
+    meaning: 'tuyết',
+    example: 'セツ',
+    title: '',
+    pronun: 'Tuyết'
+},
+{
+    word: '清',
+    type: '',
+    meaning: 'thanh',
+    example: 'セイ; ショウ; シン',
+    title: '',
+    pronun: 'Trong sạch'
+},
+{
+    word: '深',
+    type: '',
+    meaning: 'thâm',
+    example: 'シン',
+    title: '',
+    pronun: 'Sâu sắc'
+},
+{
+    word: '得',
+    type: '',
+    meaning: 'đắc',
+    example: 'トク',
+    title: '',
+    pronun: 'Thu được'
+},
+{
+    word: '第',
+    type: '',
+    meaning: 'đệ',
+    example: 'ダイ; テイ',
+    title: '',
+    pronun: 'Thứ tự'
+},
+{
+    word: '停',
+    type: '',
+    meaning: 'đình',
+    example: 'テイ',
+    title: '',
+    pronun: 'Đình chỉ'
+},
+{
+    word: '断',
+    type: '',
+    meaning: 'đoạn',
+    example: 'ダン',
+    title: '',
+    pronun: 'Giai đoạn'
+},
+{
+    word: '貨',
+    type: '',
+    meaning: 'hóa',
+    example: 'カ',
+    title: '',
+    pronun: 'Hàng hóa'
+},
+{
+    word: '液',
+    type: '',
+    meaning: 'dịch',
+    example: 'エキ',
+    title: '',
+    pronun: 'Dung dịch'
+},
+{
+    word: '移',
+    type: '',
+    meaning: 'di',
+    example: 'イ',
+    title: '',
+    pronun: 'Di chuyển'
+},
+{
+    word: '経',
+    type: '',
+    meaning: 'kinh',
+    example: 'ケイ; キョウ',
+    title: '',
+    pronun: 'Trải qua'
+},
+{
+    word: '規',
+    type: '',
+    meaning: 'quy',
+    example: 'キ',
+    title: '',
+    pronun: 'Quy tắc'
+},
+{
+    word: '寄',
+    type: '',
+    meaning: 'kí',
+    example: 'キ',
+    title: '',
+    pronun: 'Kí gửi'
+},
+{
+    word: '許',
+    type: '',
+    meaning: 'hứa',
+    example: 'キョ',
+    title: '',
+    pronun: 'Cho phép'
+},
+{
+    word: '球',
+    type: '',
+    meaning: 'cầu',
+    example: 'キュウ',
+    title: '',
+    pronun: 'Hình cầu'
+},
+{
+    word: '救',
+    type: '',
+    meaning: 'cứu',
+    example: 'キュウ',
+    title: '',
+    pronun: ''
+},
+{
+    word: '険',
+    type: '',
+    meaning: 'hiểm',
+    example: 'ケン',
+    title: '',
+    pronun: 'Hiểm trở'
+},
+{
+    word: '現',
+    type: '',
+    meaning: 'hiện',
+    example: 'ゲン',
+    title: '',
+    pronun: 'Hiện tại'
+},
+{
+    word: '混',
+    type: '',
+    meaning: 'hỗn',
+    example: 'コン',
+    title: '',
+    pronun: 'Trộn lẫn'
+},
+{
+    word: '祭',
+    type: '',
+    meaning: 'tế',
+    example: 'サイ',
+    title: '',
+    pronun: 'Tế lễ'
+},
+{
+    word: '細',
+    type: '',
+    meaning: 'tế',
+    example: 'サイ',
+    title: '',
+    pronun: 'Nhỏ bé'
+},
+{
+    word: '術',
+    type: '',
+    meaning: 'thuật',
+    example: 'ジュツ',
+    title: '',
+    pronun: 'Kĩ thuật'
+},
+{
+    word: '宿',
+    type: '',
+    meaning: 'túc',
+    example: 'シュク',
+    title: '',
+    pronun: 'Nhà trọ'
+},
+{
+    word: '章',
+    type: '',
+    meaning: 'chương',
+    example: 'ショウ',
+    title: '',
+    pronun: 'Văn chương'
+},
+{
+    word: '常',
+    type: '',
+    meaning: 'thường',
+    example: 'ジョウ',
+    title: '',
+    pronun: 'Thông thường'
+},
+{
+    word: '情',
+    type: '',
+    meaning: 'tình',
+    example: 'ジョウ; セイ',
+    title: '',
+    pronun: 'Tình cảm'
+},
+{
+    word: '植',
+    type: '',
+    meaning: 'thực',
+    example: 'ショク',
+    title: '',
+    pronun: 'Trồng cây'
+},
+{
+    word: '順',
+    type: '',
+    meaning: 'thuận',
+    example: 'ジュン',
+    title: '',
+    pronun: 'Hòa thuận'
+},
+{
+    word: '象',
+    type: '',
+    meaning: 'tượng',
+    example: 'ショウ; ゾウ',
+    title: '',
+    pronun: 'Con voi'
+},
+{
+    word: '焼',
+    type: '',
+    meaning: 'thiêu',
+    example: 'ショウ',
+    title: '',
+    pronun: 'Đốt'
+},
+{
+    word: '勝',
+    type: '',
+    meaning: 'thắng',
+    example: 'ショウ',
+    title: '',
+    pronun: 'Chiến thắng'
+},
+{
+    word: '歯',
+    type: '',
+    meaning: 'xỉ',
+    example: 'シ',
+    title: '',
+    pronun: 'Răng'
+},
+{
+    word: '最',
+    type: '',
+    meaning: 'tối',
+    example: 'サイ; シュ',
+    title: '',
+    pronun: 'Tối cao'
+},
+{
+    word: '散',
+    type: '',
+    meaning: 'tán',
+    example: 'サン',
+    title: '',
+    pronun: 'Phân tán'
+},
+{
+    word: '港',
+    type: '',
+    meaning: 'cảng',
+    example: 'コウ',
+    title: '',
+    pronun: 'Bến cảng'
+},
+{
+    word: '検',
+    type: '',
+    meaning: 'kiểm',
+    example: 'ケン',
+    title: '',
+    pronun: 'Kiểm duyệt'
+},
+{
+    word: '湖',
+    type: '',
+    meaning: 'hồ',
+    example: 'コ',
+    title: '',
+    pronun: 'Hồ nước'
+},
+{
+    word: '期',
+    type: '',
+    meaning: 'kì',
+    example: 'キ; ゴ',
+    title: '',
+    pronun: 'Học kỳ'
+},
+{
+    word: '喜',
+    type: '',
+    meaning: 'hỉ',
+    example: 'キ',
+    title: '',
+    pronun: 'Vui vẻ'
+},
+{
+    word: '結',
+    type: '',
+    meaning: 'kết',
+    example: 'ケツ; ケチ',
+    title: '',
+    pronun: 'Nối'
+},
+{
+    word: '景',
+    type: '',
+    meaning: 'cảnh',
+    example: 'ケイ',
+    title: '',
+    pronun: 'Cảnh sắc'
+},
+{
+    word: '給',
+    type: '',
+    meaning: 'cấp',
+    example: 'キュウ',
+    title: '',
+    pronun: 'Cấp bậc'
+},
+{
+    word: '雲',
+    type: '',
+    meaning: 'vân',
+    example: 'ウン',
+    title: '',
+    pronun: 'Mây'
+},
+{
+    word: '営',
+    type: '',
+    meaning: 'doanh',
+    example: 'エイ',
+    title: '',
+    pronun: 'Kinh doanh'
+},
+{
+    word: '温',
+    type: '',
+    meaning: 'ôn',
+    example: 'オン',
+    title: '',
+    pronun: 'Ôn hòa'
+},
+{
+    word: '過',
+    type: '',
+    meaning: 'quá',
+    example: 'カ',
+    title: '',
+    pronun: 'Vượt qua'
+},
+{
+    word: '絵',
+    type: '',
+    meaning: 'hội',
+    example: 'カイ; エ',
+    title: '',
+    pronun: 'Hội họa'
+},
+{
+    word: '階',
+    type: '',
+    meaning: 'giai',
+    example: 'カイ',
+    title: '',
+    pronun: 'Tầng'
+},
+{
+    word: '達',
+    type: '',
+    meaning: 'đạt',
+    example: 'タツ; ダ',
+    title: '',
+    pronun: 'Thành đạt'
+},
+{
+    word: '覚',
+    type: '',
+    meaning: 'giác',
+    example: 'カク',
+    title: '',
+    pronun: 'Tri giác'
+},
+{
+    word: '貯',
+    type: '',
+    meaning: 'trữ',
+    example: 'チョ',
+    title: '',
+    pronun: 'Dự trữ'
+},
+{
+    word: '測',
+    type: '',
+    meaning: 'trắc',
+    example: 'ソク',
+    title: '',
+    pronun: 'Đo lường'
+},
+{
+    word: '童',
+    type: '',
+    meaning: 'đồng',
+    example: 'ドウ',
+    title: '',
+    pronun: 'Nhi đồng'
+},
+{
+    word: '等',
+    type: '',
+    meaning: 'đẳng',
+    example: 'トウ',
+    title: '',
+    pronun: 'Đẳng cấp'
+},
+{
+    word: '湯',
+    type: '',
+    meaning: 'thang',
+    example: 'トウ',
+    title: '',
+    pronun: 'Nước nóng'
+},
+{
+    word: '登',
+    type: '',
+    meaning: 'đăng',
+    example: 'トウ; ト; ドウ; シ ョウ; チョウ',
+    title: '',
+    pronun: 'Leo núi'
+},
+{
+    word: '程',
+    type: '',
+    meaning: 'trình',
+    example: 'テイ',
+    title: '',
+    pronun: 'Trình độ'
+},
+{
+    word: '絶',
+    type: '',
+    meaning: 'tuyệt',
+    example: 'ゼツ',
+    title: '',
+    pronun: 'Cắt đứt'
+},
+{
+    word: '然',
+    type: '',
+    meaning: 'nhiên',
+    example: 'ゼン; ネン',
+    title: '',
+    pronun: 'Tự nhiên'
+},
+{
+    word: '富',
+    type: '',
+    meaning: 'phú',
+    example: 'フ; フウ',
+    title: '',
+    pronun: 'Giàu có'
+},
+{
+    word: '復',
+    type: '',
+    meaning: 'phục',
+    example: 'フク',
+    title: '',
+    pronun: 'Trang phục'
+},
+{
+    word: '費',
+    type: '',
+    meaning: 'phí',
+    example: 'ヒ',
+    title: '',
+    pronun: 'Kinh phí'
+},
+{
+    word: '番',
+    type: '',
+    meaning: 'phiên',
+    example: 'バン',
+    title: '',
+    pronun: 'Thứ tự'
+},
+{
+    word: '悲',
+    type: '',
+    meaning: 'bi',
+    example: 'ヒ',
+    title: '',
+    pronun: 'Bi thương'
+},
+{
+    word: '筆',
+    type: '',
+    meaning: 'bút',
+    example: 'ヒツ',
+    title: '',
+    pronun: 'Bút lông'
+},
+{
+    word: '備',
+    type: '',
+    meaning: 'bị',
+    example: 'ビ',
+    title: '',
+    pronun: 'Chuẩn bị'
+},
+{
+    word: '貿',
+    type: '',
+    meaning: 'mậu',
+    example: 'ボウ',
+    title: '',
+    pronun: 'Mậu dịch'
+},
+{
+    word: '無',
+    type: '',
+    meaning: 'vô',
+    example: 'ム; ブ',
+    title: '',
+    pronun: 'Không'
+},
+{
+    word: '報',
+    type: '',
+    meaning: 'báo',
+    example: 'ホウ',
+    title: '',
+    pronun: 'Thông báo'
+},
+{
+    word: '満',
+    type: '',
+    meaning: 'mãn',
+    example: 'マン; バン',
+    title: '',
+    pronun: 'Mãn nguyện'
+},
+{
+    word: '量',
+    type: '',
+    meaning: 'lượng',
+    example: 'リョウ',
+    title: '',
+    pronun: 'Số lượng'
+},
+{
+    word: '遊',
+    type: '',
+    meaning: 'du',
+    example: 'ユウ; ユ',
+    title: '',
+    pronun: 'Chơi'
+},
+{
+    word: '落',
+    type: '',
+    meaning: 'lạc',
+    example: 'ラク',
+    title: '',
+    pronun: 'Rơi'
+},
+{
+    word: '独',
+    type: '',
+    meaning: 'độc',
+    example: 'ドク; トク',
+    title: '',
+    pronun: 'Độc thân'
+},
+{
+    word: '陽',
+    type: '',
+    meaning: 'duơng',
+    example: 'ヨウ',
+    title: '',
+    pronun: 'Mặt trời'
+},
+{
+    word: '葉',
+    type: '',
+    meaning: 'diệp',
+    example: 'ヨウ',
+    title: '',
+    pronun: 'Lá cây'
+},
+{
+    word: '税',
+    type: '',
+    meaning: 'thuế',
+    example: 'ゼイ',
+    title: '',
+    pronun: 'Tiền thuế'
+},
+{
+    word: '路',
+    type: '',
+    meaning: 'lộ',
+    example: 'ロ; ル',
+    title: '',
+    pronun: 'Con đường'
+},
+{
+    word: '豊',
+    type: '',
+    meaning: 'phong',
+    example: 'ホウ; ブ',
+    title: '',
+    pronun: 'Phong phú'
+},
+{
+    word: '夢',
+    type: '',
+    meaning: 'mộng',
+    example: 'ム; ボウ',
+    title: '',
+    pronun: 'Giấc mơ'
+},
+{
+    word: '農',
+    type: '',
+    meaning: 'nông',
+    example: 'ノウ ; ショウ',
+    title: '',
+    pronun: 'Nông thôn'
+},
+{
+    word: '続',
+    type: '',
+    meaning: 'tục',
+    example: 'ゾク; ショク; コ ウ; キョウ',
+    title: '',
+    pronun: 'Tiếp tục'
+},
+{
+    word: '損',
+    type: '',
+    meaning: 'tổn',
+    example: 'ソン',
+    title: '',
+    pronun: 'Tổn hại'
+},
+{
+    word: '想',
+    type: '',
+    meaning: 'tưởng',
+    example: 'ソウ; ソ',
+    title: '',
+    pronun: 'Ý tưởng'
+},
+{
+    word: '戦',
+    type: '',
+    meaning: 'chiến',
+    example: 'セン',
+    title: '',
+    pronun: 'Chiến tranh'
+},
+{
+    word: '勢',
+    type: '',
+    meaning: 'thế',
+    example: 'セイ; ゼイ',
+    title: '',
+    pronun: 'Tư thế'
+},
+{
+    word: '数',
+    type: '',
+    meaning: 'sổ',
+    example: 'スウ; ス; サク; ソ ク; シュ',
+    title: '',
+    pronun: 'Con số'
+},
+{
+    word: '置',
+    type: '',
+    meaning: 'trí',
+    example: 'チ',
+    title: '',
+    pronun: 'Bố trí'
+},
+{
+    word: '鉄',
+    type: '',
+    meaning: 'thiết',
+    example: 'テツ',
+    title: '',
+    pronun: 'Sắt'
+},
+{
+    word: '感',
+    type: '',
+    meaning: 'cảm',
+    example: 'カン',
+    title: '',
+    pronun: 'Cảm xúc'
+},
+{
+    word: '解',
+    type: '',
+    meaning: 'giải',
+    example: 'カイ; ゲ',
+    title: '',
+    pronun: 'Giải quyết'
+},
+{
+    word: '園',
+    type: '',
+    meaning: 'viên',
+    example: 'エン',
+    title: '',
+    pronun: 'Vườn'
+},
+{
+    word: '愛',
+    type: '',
+    meaning: 'ái',
+    example: 'アイ',
+    title: '',
+    pronun: 'Yêu thương'
+},
+{
+    word: '塩',
+    type: '',
+    meaning: 'diêm',
+    example: 'エン',
+    title: '',
+    pronun: 'Muối'
+},
+{
+    word: '極',
+    type: '',
+    meaning: 'cực',
+    example: 'キョク; ゴク',
+    title: '',
+    pronun: 'Địa cực'
+},
+{
+    word: '逆',
+    type: '',
+    meaning: 'nghịch',
+    example: 'ギャク; ゲキ',
+    title: '',
+    pronun: 'Ngược lại'
+},
+{
+    word: '禁',
+    type: '',
+    meaning: 'cấm',
+    example: 'キン',
+    title: '',
+    pronun: 'Cấm đoán'
+},
+{
+    word: '罪',
+    type: '',
+    meaning: 'tội',
+    example: 'ザイ',
+    title: '',
+    pronun: 'Tội ác'
+},
+{
+    word: '資',
+    type: '',
+    meaning: 'tư',
+    example: 'シ',
+    title: '',
+    pronun: 'Tư cách'
+},
+{
+    word: '準',
+    type: '',
+    meaning: 'chuẩn',
+    example: 'ジュン',
+    title: '',
+    pronun: 'Chuẩn mực'
+},
+{
+    word: '種',
+    type: '',
+    meaning: 'chủng',
+    example: 'シュ',
+    title: '',
+    pronun: 'Chủng loại'
+},
+{
+    word: '雑',
+    type: '',
+    meaning: 'tạp',
+    example: 'ザツ; ゾウ',
+    title: '',
+    pronun: 'Tạp chí'
+},
+{
+    word: '際',
+    type: '',
+    meaning: 'tế',
+    example: 'サイ',
+    title: '',
+    pronun: 'Giao tiếp'
+},
+{
+    word: '算',
+    type: '',
+    meaning: 'toán',
+    example: 'サン',
+    title: '',
+    pronun: 'Tính toán'
+},
+{
+    word: '察',
+    type: '',
+    meaning: 'sát',
+    example: 'サツ',
+    title: '',
+    pronun: 'Xem xét'
+},
+{
+    word: '構',
+    type: '',
+    meaning: 'cấu',
+    example: 'コウ',
+    title: '',
+    pronun: 'Cấu tạo'
+},
+{
+    word: '関',
+    type: '',
+    meaning: 'quan',
+    example: 'カン',
+    title: '',
+    pronun: 'Quan hệ'
+},
+{
+    word: '境',
+    type: '',
+    meaning: 'cảnh',
+    example: 'キョウ; ケイ',
+    title: '',
+    pronun: 'Biên giới'
+},
+{
+    word: '漁',
+    type: '',
+    meaning: 'ngư',
+    example: 'ギョ; リョウ',
+    title: '',
+    pronun: 'Cá'
+},
+{
+    word: '演',
+    type: '',
+    meaning: 'diễn',
+    example: 'エン',
+    title: '',
+    pronun: 'Trình diễn'
+},
+{
+    word: '慣',
+    type: '',
+    meaning: 'quán',
+    example: 'カン',
+    title: '',
+    pronun: 'Tập quán'
+},
+{
+    word: '管',
+    type: '',
+    meaning: 'quản',
+    example: 'カン',
+    title: '',
+    pronun: 'Quản lý'
+},
+{
+    word: '銅',
+    type: '',
+    meaning: 'đồng',
+    example: 'ドウ',
+    title: '',
+    pronun: 'Chất đồng'
+},
+{
+    word: '適',
+    type: '',
+    meaning: 'thích',
+    example: 'テキ',
+    title: '',
+    pronun: 'Thích hợp'
+},
+{
+    word: '精',
+    type: '',
+    meaning: 'tinh',
+    example: 'セイ; ショウ; シヤ ウ',
+    title: '',
+    pronun: 'Tinh thần'
+},
+{
+    word: '製',
+    type: '',
+    meaning: 'chế',
+    example: 'セイ',
+    title: '',
+    pronun: 'Sản xuất'
+},
+{
+    word: '静',
+    type: '',
+    meaning: 'tĩnh',
+    example: 'セイ; ジョウ',
+    title: '',
+    pronun: 'Yên tĩnh'
+},
+{
+    word: '像',
+    type: '',
+    meaning: 'tượng',
+    example: 'ゾウ',
+    title: '',
+    pronun: 'Con voi'
+},
+{
+    word: '増',
+    type: '',
+    meaning: 'tăng',
+    example: 'ゾウ',
+    title: '',
+    pronun: 'Gia tăng'
+},
+{
+    word: '総',
+    type: '',
+    meaning: 'tổng',
+    example: 'ソウ',
+    title: '',
+    pronun: 'Tổng thể'
+},
+{
+    word: '鼻',
+    type: '',
+    meaning: 'tị',
+    example: 'ビ',
+    title: '',
+    pronun: 'Cái mũi'
+},
+{
+    word: '複',
+    type: '',
+    meaning: 'phức',
+    example: 'フク',
+    title: '',
+    pronun: 'Phức tạp'
+},
+{
+    word: '鳴',
+    type: '',
+    meaning: 'minh',
+    example: 'メイ',
+    title: '',
+    pronun: 'Kêu, hót'
+},
+{
+    word: '綿',
+    type: '',
+    meaning: 'miên',
+    example: 'メン',
+    title: '',
+    pronun: 'Lụa'
+},
+{
+    word: '様',
+    type: '',
+    meaning: 'dạng',
+    example: 'ヨウ; ショウ',
+    title: '',
+    pronun: 'Hình dạng'
+},
+{
+    word: '領',
+    type: '',
+    meaning: 'lĩnh',
+    example: 'リョウ',
+    title: '',
+    pronun: 'Nhận được'
+},
+{
+    word: '緑',
+    type: '',
+    meaning: 'lục',
+    example: 'リョク; ロク',
+    title: '',
+    pronun: 'Xanh lá cây'
+},
+{
+    word: '練',
+    type: '',
+    meaning: 'luyện',
+    example: 'レン',
+    title: '',
+    pronun: 'Luyện tập'
+},
+{
+    word: '歴',
+    type: '',
+    meaning: 'lịch',
+    example: 'レキ; レッキ',
+    title: '',
+    pronun: 'Lý lịch'
+},
+{
+    word: '輪',
+    type: '',
+    meaning: 'luân',
+    example: 'リン',
+    title: '',
+    pronun: 'Bánh xe'
+},
+{
+    word: '編',
+    type: '',
+    meaning: 'biên',
+    example: 'ヘン',
+    title: '',
+    pronun: 'Biên tập'
+},
+{
+    word: '箱',
+    type: '',
+    meaning: 'tương',
+    example: 'ソウ',
+    title: '',
+    pronun: 'Hộp'
+},
+{
+    word: '熱',
+    type: '',
+    meaning: 'nhiệt',
+    example: 'ネツ',
+    title: '',
+    pronun: 'Nhiệt độ'
+},
+{
+    word: '選',
+    type: '',
+    meaning: 'tuyển',
+    example: 'セン',
+    title: '',
+    pronun: 'Tuyển chọn'
+},
+{
+    word: '線',
+    type: '',
+    meaning: 'tuyến',
+    example: 'セン',
+    title: '',
+    pronun: 'Đường dây'
+},
+{
+    word: '導',
+    type: '',
+    meaning: 'đạo',
+    example: 'ドウ',
+    title: '',
+    pronun: 'Lãnh đạo'
+},
+{
+    word: '談',
+    type: '',
+    meaning: 'đàm',
+    example: 'ダン',
+    title: '',
+    pronun: 'Đối thoại'
+},
+{
+    word: '調',
+    type: '',
+    meaning: 'điều',
+    example: 'チョウ',
+    title: '',
+    pronun: 'Điều chỉnh'
+},
+{
+    word: '横',
+    type: '',
+    meaning: 'hoành',
+    example: 'オウ',
+    title: '',
+    pronun: 'Ngang'
+},
+{
+    word: '確',
+    type: '',
+    meaning: 'xác',
+    example: 'カク; コウ',
+    title: '',
+    pronun: 'Xác nhận'
+},
+{
+    word: '課',
+    type: '',
+    meaning: 'khóa',
+    example: 'リュウ; ル',
+    title: '',
+    pronun: 'Bài học'
+},
+{
+    word: '器',
+    type: '',
+    meaning: 'khí',
+    example: 'キ',
+    title: '',
+    pronun: 'Khí cụ'
+},
+{
+    word: '賛',
+    type: '',
+    meaning: 'tán',
+    example: 'サン',
+    title: '',
+    pronun: 'Tán thành'
+},
+{
+    word: '賞',
+    type: '',
+    meaning: 'thưởng',
+    example: 'ショウ',
+    title: '',
+    pronun: 'Giải thưởng'
+},
+{
+    word: '機',
+    type: '',
+    meaning: 'cơ',
+    example: 'キ',
+    title: '',
+    pronun: 'Máy móc'
+},
+{
+    word: '橋',
+    type: '',
+    meaning: 'kiều',
+    example: 'キョウ',
+    title: '',
+    pronun: 'Cây cầu'
+},
+{
+    word: '積',
+    type: '',
+    meaning: 'tích',
+    example: 'セキ',
+    title: '',
+    pronun: 'Xếp lên'
+},
+{
+    word: '輸',
+    type: '',
+    meaning: 'thâu',
+    example: 'ユ; シュ',
+    title: '',
+    pronun: 'Chuyên chở'
+},
+{
+    word: '録',
+    type: '',
+    meaning: 'lục',
+    example: 'ロク',
+    title: '',
+    pronun: 'Xanh lục'
+},
+{
+    word: '績',
+    type: '',
+    meaning: 'tích',
+    example: 'セキ',
+    title: '',
+    pronun: 'Thành tích'
+},
+{
+    word: '講',
+    type: '',
+    meaning: 'giảng',
+    example: 'コウ',
+    title: '',
+    pronun: 'Giảng đường'
+},
+{
+    word: '職',
+    type: '',
+    meaning: 'chức',
+    example: 'ショク; ソク',
+    title: '',
+    pronun: 'Công việc'
+},
+{
+    word: '観',
+    type: '',
+    meaning: 'quan',
+    example: 'カン',
+    title: '',
+    pronun: 'Quan sát'
+},
+{
+    word: '額',
+    type: '',
+    meaning: 'ngạch',
+    example: 'ガク',
+    title: '',
+    pronun: 'Trán, kim ngạch'
+},
+{
+    word: '類',
+    type: '',
+    meaning: 'loại',
+    example: 'ルイ',
+    title: '',
+    pronun: 'Chủng loại'
+},
+{
+    word: '願',
+    type: '',
+    meaning: 'nguyện',
+    example: 'ガン',
+    title: '',
+    pronun: 'Cầu nguyện'
+},
+{
+    word: '識',
+    type: '',
+    meaning: 'thức',
+    example: 'シキ',
+    title: '',
+    pronun: 'Kiến thức'
+},
+{
+    word: '競',
+    type: '',
+    meaning: 'cạnh',
+    example: 'キョウ; ケイ',
+    title: '',
+    pronun: 'Cạnh tranh'
+},
+{
+    word: '議',
+    type: '',
+    meaning: 'nghị',
+    example: 'ギ',
+    title: '',
+    pronun: 'Hội nghị'
 },
 ];

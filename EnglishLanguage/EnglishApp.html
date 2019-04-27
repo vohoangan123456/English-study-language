@@ -88,7 +88,9 @@
 	var tempDataForAllMode;
 	var autoCompleteMeaning = [];
 	var isNeedConvert = true;	//need to convert example and meaning
-	$(document).ready(function(){	
+	var startRange = 0, endRange = wordOnSteps;
+	$(document).ready(function(){
+		
 		$("[value = 'write_vietnamese']").hide();
 		$("[value = 'write_kanji_hira']").hide();
 		$("[value = 'write_kanji_vietnamese']").hide();
@@ -141,7 +143,7 @@
 					var tempBoolean = false;
 					var tempIsRightWord = -1;
 					$.each(isRightWord, function(index, value){
-						if(dataWordObject[value].meaning.trim(" ") == $("#randomWord").html().trim(" "))
+						if(dataWordObject[value].meaning.trim(" ") == $("#randomWord").html().trim(" ") && value >= startRange && value <= endRange)
 						{
 							tempBoolean = true;
 							tempIsRightWord = value;
@@ -380,93 +382,6 @@
 				default:
 					break;
 			}
-			/*if($("#version").val() == "groupword"){
-				$("[value = 'write_vietnamese']").hide();
-				$("[value = 'write_kanji_hira']").hide();
-				$("[value = 'write_kanji_vietnamese']").hide();
-				$("[value = 'write_hira']").hide();
-				
-				$("[value = 'vietnamese']").show();
-				$("[value = 'english']").show();
-				$.each( NounWords, function( index, value )
-				{
-					dataWordObject.push(value);
-					autoCompleteMeaning.push(value.meaning);
-				});
-			}
-			else if($("#version").val() == "noval"){
-				$("[value = 'write_vietnamese']").hide();
-				$("[value = 'write_kanji_hira']").hide();
-				$("[value = 'write_kanji_vietnamese']").hide();
-				$("[value = 'write_hira']").hide();
-				
-				$("[value = 'vietnamese']").show();
-				$("[value = 'english']").show();
-				$.each( NovalWord, function( index, value )
-				{
-					dataWordObject.push(value);
-					autoCompleteMeaning.push(value.meaning);
-				});
-			}
-			else if($("#version").val() == "word")
-			{
-				$("[value = 'write_vietnamese']").hide();
-				$("[value = 'write_kanji_hira']").hide();
-				$("[value = 'write_kanji_vietnamese']").hide();
-				$("[value = 'write_hira']").hide();
-				
-				$("[value = 'vietnamese']").show();
-				$("[value = 'english']").show();
-				$.each( newWords, function( index, value )
-				{
-					dataWordObject.push(value);
-					autoCompleteMeaning.push(value.meaning);
-				});
-			}
-			else if($("#version").val() == "toeic")
-			{
-				$("[value = 'write_hira']").html()
-				$("[value = 'write_vietnamese']").hide();
-				$("[value = 'write_kanji_hira']").hide();
-				$("[value = 'write_kanji_vietnamese']").hide();
-				$("[value = 'write_hira']").hide();
-				
-				$("[value = 'vietnamese']").show();
-				$("[value = 'english']").show();
-				$.each( ToeicWords, function( index, value )
-				{
-					dataWordObject.push(value);
-					autoCompleteMeaning.push(value.meaning);
-				});	
-			}else if($("#version").val() == "kanji-hiragana"){
-				$("[value = 'vietnamese']").hide();
-				$("[value = 'english']").hide();
-				$("[value = 'write_kanji_vietnamese']").hide();
-				$("[value = 'write_vietnamese']").hide();
-				
-				$("[value = 'write_kanji_hira']").show();
-				$("[value = 'write_hira']").show();
-				$.each( kanjiwords, function( index, value )
-				{
-					dataWordObject.push(value);
-					autoCompleteMeaning.push(value.meaning);
-				});
-			}
-			else if($("#version").val() == "kanji-vietnamese"){
-				$("[value = 'vietnamese']").hide();
-				$("[value = 'english']").hide();
-				$("[value = 'write_hira']").hide();
-				$("[value = 'write_kanji_hira']").hide();
-				
-				$("[value = 'write_kanji_vietnamese']").show();
-				$("[value = 'write_vietnamese']").show();
-				
-				$.each( kanjiwords, function( index, value )
-				{
-					dataWordObject.push(value);
-					autoCompleteMeaning.push(value.meaning);
-				});
-			}*/
 			$("#selectRange").remove();
 			selectRange = addSelectRanges(dataWordObject, wordOnSteps, $("#rangeOfTest"));
 			selectRange.on('change', function()
@@ -547,7 +462,9 @@
 	{
 		$("#meaningOfText").html("");
 		changeModeViewWord(tempWordObject, $("#modeViewWords").val());
-		changeRangeTest($("#selectRange").val(),wordOnSteps);
+		var range = changeRangeTest($("#selectRange").val(),wordOnSteps);
+		startRange = range[0];
+		endRange = range[1];
 	}
 	function nextRandom(){
 		randomIndex = random(tempWordObject.length);
